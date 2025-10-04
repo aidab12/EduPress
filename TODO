@@ -9,8 +9,7 @@ github cicd
 isort, flake8
 minio
 redis
-postgreSQL
-websocked
+postgresql
 server
 
 
@@ -34,7 +33,6 @@ Task
 ...
 6. AboutUs model yozish
 7. contact us apini chiqarish (adminkada korishi kerak, is_read bolsin)
-
 
 
 

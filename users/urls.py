@@ -1,12 +1,10 @@
 from django.urls import path
 
-from users.views import (SingupAPIView)
-from rest_framework.authtoken.views import (obtain_auth_token,)
-
+from users.views import SignUpAPIView, LoginAPIView
 
 app_name = 'users'
 
 urlpatterns = [
-    path('singup/', SingupAPIView.as_view(), name='singup_api_view'),
-    path('login/', obtain_auth_token, name='login_api_view'),
+    path('singup/', SignUpAPIView.as_view(), name='signup_api_view'),
+    path('login/', LoginAPIView.as_view(), name='login_api_view'),
 ]

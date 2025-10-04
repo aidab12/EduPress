@@ -25,7 +25,7 @@ class UserManager(BaseUserManager):
 
 class User(AbstractBaseUser, PermissionsMixin):
     id = UUIDField(primary_key=True, default=uuid4, editable=False)
-    creat_at = DateField(auto_now_add=True)
+    created_at = DateField(auto_now_add=True)
     email = EmailField(unique=True)
     is_staff = BooleanField(default=False)
 
