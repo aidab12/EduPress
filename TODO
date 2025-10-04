@@ -24,3 +24,19 @@ Task
 
 
 
+
+
+
+Task
+1. login register apilari (register email ga tasdiqlash xabarini yuborish kerak [celery])
+2. forgot password apini chiqarish
+3. category, course, instructor, blog, tag modellarini yozish
+...
+6. AboutUs model yozish
+7. contact us apini chiqarish (adminkada korishi kerak, is_read bolsin)
+
+
+
+
+
+
