@@ -1,8 +1,8 @@
-from django.db.models import UUIDField, DateField, EmailField, BooleanField
+from django.db.models import UUIDField, DateField, EmailField, BooleanField, CharField
 
 from django.contrib.auth.models import (AbstractBaseUser, PermissionsMixin, BaseUserManager)
 
-from uuid import uuid4
+from main.models import UUIDBaseModel
 
 
 class UserManager(BaseUserManager):
@@ -23,11 +23,18 @@ class UserManager(BaseUserManager):
         return user
 
 
-class User(AbstractBaseUser, PermissionsMixin):
-    id = UUIDField(primary_key=True, default=uuid4, editable=False)
-    created_at = DateField(auto_now_add=True)
+class User(AbstractBaseUser, PermissionsMixin, UUIDBaseModel):
+    first_name = CharField(max_length=100)
+    last_name = CharField(max_length=100)
     email = EmailField(unique=True)
+    username = CharField(max_length=150, unique=True)
+    is_active = BooleanField(default=True)
     is_staff = BooleanField(default=False)
+    created_at = DateField(auto_now_add=True)
 
-    USERNAME_FIELD = 'email'
+    USERNAME_FIELD = 'email'  # Говорит используй поле emal для login вместо username
+    REQUIRED_FIELDS = ('username',)
     objects = UserManager()
+
+    def __str__(self):
+        return self.email

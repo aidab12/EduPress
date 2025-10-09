@@ -13,6 +13,53 @@ postgresql
 server
 
 
+Models:
+Category:
+    name
+    img
+Instructors:
+    uuid
+    name
+    bio
+Course:
+    category - forinkey
+    title: Create An LMS Website With LearnPress
+    author: Determined-Poitras
+    duration: 2 Weeks
+    students_count: 156
+    level: All levels / Beginner / Intermediate / Expert
+    lessons_count: 20
+    price: $29.0 или Free
+    old_price: $29.0
+    tags: Free / Paid
+    image: (обложка курса)
+    status: Активен / В архиве (на будущее)
+    course_category (enum или FK)
+
+instructor (FK → Instructor)
+
+price_type (enum: Free / Paid / All)
+
+review_rating (float)
+
+level (enum)
+
+lessons (int)
+
+students_count (int)
+description / overview
+
+curriculum (модуль → уроки)
+
+quizzes_count
+
+reviews (связь с моделью Review)
+
+video_lessons (потом можно вынести в отдельную таблицу Lesson)
+
+
+
+
 Task
 1. login register apilari (register email ga tasdiqlash xabarini yuborish kerak [celery])
 2. forgot password apini chiqarish

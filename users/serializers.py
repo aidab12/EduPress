@@ -7,15 +7,39 @@ from users.models import User
 class SignUpSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = 'email', 'password', 'id',
+        fields = ('id', 'email', 'username', 'password',)
         extra_kwargs = {
-            'password': {'write_only': True},
-            'id': {'read_only': True}
+            'id': {'read_only': True},
+            'password': {'write_only': True}
         }
 
+    def validate_username(self, value):
+
+        if len(value) < 3:
+            raise serializers.ValidationError("Username должен содержать минимум 3 символа.")
+
+        if " " in value:
+            raise serializers.ValidationError("Username не должен содержать пробелов.")
+
+        return value
+
     def create(self, validated_data):
-        user = User.objects.create_user(email=validated_data['email'], password=validated_data['password'])
+        user = User.objects.create_user(
+            email=validated_data['email'],
+            username=validated_data['username'],
+            password=validated_data['password']
+        )
         return user
+
+    def to_representation(self, instance):
+        return {
+            "user": {
+                "id": instance.id,
+                "mail": instance.email,
+                "username": instance.username,
+            },
+            "message": "Registration successful."
+        }
 
 
 class LoginSerializer(serializers.Serializer):
@@ -27,18 +51,21 @@ class LoginSerializer(serializers.Serializer):
         email = attrs.get('email')
         password = attrs.get('password')
 
-        if email and password:
-            user = authenticate(request=self.context.get('request'), email=email, password=password)
+        if not email or not password:
+            raise serializers.ValidationError('Email and password are required.')
 
-            # The authenticate call simply returns None for is_active=False
-            # users. (Assuming the default ModelBackend authentication
-            # backend.)
-            if not user:
-                msg = 'Unable to log in with provided credentials.'
-                raise serializers.ValidationError(msg, code='authorization')
-        else:
-            msg = 'Must include "email" and "password".'
-            raise serializers.ValidationError(msg, code='authorization')
+        if email and password:
+            user = authenticate(
+                request=self.context.get('request'),
+                email=email,
+                password=password
+            )
+
+        if not user:
+            raise serializers.ValidationError('Invalid email or password.')
+
+        if not user.is_active:
+            raise serializers.ValidationError('User account is disabled.')
 
         attrs['user'] = user
         return attrs

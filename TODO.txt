@@ -1,0 +1,25 @@
+https://www.figma.com/design/gFoTExaXHl19o8PoNNgGSL/Free-Education-Template-%7C-Online-Courses-%26-E-Learning-%7C-EduPress-(Community)?node-id=0-1&p=f&t=Hcgs4FwaDq8dna18-0
+
+...
+
+docker compose
+Makefile
+github cicd
+isort, flake8
+minio
+redis
+postgresql
+server
+
+
+Task
+1. login register apilari (register email ga tasdiqlash xabarini yuborish kerak [celery])
+2. forgot password apini chiqarish
+3. category, course, instructor, blog, tag modellarini yozish
+
+6. AboutUs model yozish
+7. contact us apini chiqarish (adminkada korishi kerak, is_read bolsin)
+
+
+
+
