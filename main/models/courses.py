@@ -1,6 +1,6 @@
 from django.db.models import (Model, CharField, TextField, ImageField,
                               SlugField, ForeignKey, PROTECT, ManyToManyField, PositiveSmallIntegerField,
-                              DateTimeField, CASCADE, PositiveIntegerField)
+                              DateTimeField, CASCADE, PositiveIntegerField, URLField, TextChoices)
 from django.utils.translation import gettext_lazy as _
 
 from users.models import User
@@ -11,26 +11,62 @@ class CourseCategory(CreatedCategoryModel):
     pass
 
 
-class Instructor(User):
-    name = CharField(max_length=150, null=False)
-    bio = TextField()
-    photo = ImageField(upload_to='instructor/%Y/%m/%d')
-    follow = ForeignKey('main.SocialLink', CASCADE, related_name='instructor')
-
-
-class Course(Model):
+class Course(CreatedBaseModel):
     title = CharField(max_length=255)
-    slug = SlugField(unique=True)
     thumbnail = ImageField(upload_to="courses/thumbnails/%Y/%m/%d")
     category = ForeignKey('main.CourseCategory', PROTECT, related_name="courses")
     instructor = ManyToManyField('main.Instructor', related_name='corses')
     description = TextField()
     duration_week = PositiveSmallIntegerField(default=1)
-
     quizzes_count = PositiveSmallIntegerField(default=0)
-    updated_at = DateTimeField(auto_now=True)
-    created_at = DateTimeField(auto_now_add=True)
 
+
+
+class CourseContent(CreatedBaseModel):
+    course = ForeignKey('main.Course', CASCADE, 'course_content')
+    CONTENT_TYPE_CHOICES = [
+    ('text', 'Text'),
+    ('video', 'Video'),
+    ('quiz', 'Quiz'),
+    ]
+    content_type = CharField(max_length=20, choices=CONTENT_TYPE_CHOICES)
+    lesson_content = PositiveIntegerField()
+    video_url = URLField(max_length=255)
+
+
+class Enrollment(CreatedBaseModel): # (Запись на курс)
+
+    class CompletionStatus(TextChoices):
+        ENROLLED = "enrolled", _("Зачислен")
+        IN_PROGRESS = "in_progress", _("Проходит")
+        COMPLETED = "completed", _("Завершил")
+        CANCELLED = "cancelled", _("Отменено")
+
+    student = ForeignKey('users.Student', CASCADE)
+    course = ForeignKey('main.Course', CASCADE, 'enrollments')
+    enrollment_date = DateTimeField(auto_now_add=True) # дата зачисления
+    completion_status = CharField(
+        max_length=20,
+        choices=CompletionStatus.choices,
+        default=CompletionStatus.ENROLLED
+    )
+
+
+class Quiz(CreatedBaseModel):
+    course = ForeignKey('main.Course', CASCADE, 'quizzes')
+    quiz_name = CharField(max_length=255)
+    description = TextField(blank=True)
+    totalMarks = PositiveSmallIntegerField(default=100) #максимальное количество баллов
+
+class CourseProgress(CreatedBaseModel):
+    pass
+
+
+class CourseResult:
+    user = ForeignKey('main.Student', CASCADE, 'course_result')
+    course = ForeignKey('main.Course', CASCADE)
+    quiz = ForeignKey('main.Quiz', CASCADE, related_name='results')
+    score = PositiveSmallIntegerField(default=0)
 
 class Lesson(CreatedBaseModel):
     lessons_count = PositiveSmallIntegerField(default=1)

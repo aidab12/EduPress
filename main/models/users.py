@@ -12,7 +12,7 @@ class Student(User):
 
 
 class Instructor(User):
-    name = CharField(max_length=150, blank=False, null=False)
+    name = CharField(max_length=150)
     bio = TextField()
     photo = ImageField(upload_to='instructor/%Y/%m/%d')
 
