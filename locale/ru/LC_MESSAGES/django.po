@@ -1,0 +1,125 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-11 17:39+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: main/models/courses.py:15
+msgid "Категория"
+msgstr ""
+
+#: main/models/courses.py:16
+msgid "Категории"
+msgstr ""
+
+#: main/models/courses.py:33
+msgid "Начальный"
+msgstr ""
+
+#: main/models/courses.py:34
+msgid "Средний"
+msgstr ""
+
+#: main/models/courses.py:35
+msgid "Профессиональный"
+msgstr ""
+
+#: main/models/courses.py:39
+msgid "Описание"
+msgstr ""
+
+#: main/models/courses.py:40
+msgid "Краткое описание"
+msgstr ""
+
+#: main/models/courses.py:43
+msgid "Эскиз"
+msgstr ""
+
+#: main/models/courses.py:44
+msgid "Превью видео"
+msgstr ""
+
+#: main/models/courses.py:45
+msgid "Продолжительность"
+msgstr ""
+
+#: main/models/courses.py:66
+msgid "Опубликован"
+msgstr ""
+
+#: main/models/courses.py:67
+msgid "Рекомендуемый"
+msgstr ""
+
+#: main/models/courses.py:70
+msgid "Курс"
+msgstr ""
+
+#: main/models/courses.py:71
+msgid "Курсы"
+msgstr ""
+
+#: main/models/courses.py:99
+msgid "Зачислен"
+msgstr ""
+
+#: main/models/courses.py:100
+msgid "Проходит"
+msgstr ""
+
+#: main/models/courses.py:101
+msgid "Завершил"
+msgstr ""
+
+#: main/models/courses.py:102
+msgid "Отменено"
+msgstr ""
+
+#: main/models/courses.py:158
+msgid "Question"
+msgstr ""
+
+#: main/models/courses.py:159
+msgid "Введите вопрос"
+msgstr ""
+
+#: main/models/courses.py:162
+msgid "Answer"
+msgstr ""
+
+#: main/models/courses.py:163
+msgid "Введите ответ на вопрос"
+msgstr ""
+
+#: main/models/courses.py:168
+msgid "Display order"
+msgstr ""
+
+#: main/models/courses.py:169
+msgid "Порядок отображения в списке FAQ"
+msgstr ""
+
+#: main/models/courses.py:173
+msgid "FAQ"
+msgstr ""
+
+#: main/models/courses.py:174
+msgid "FAQs"
+msgstr ""

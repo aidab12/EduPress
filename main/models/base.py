@@ -1,8 +1,9 @@
 import os
 from datetime import datetime
-from django.db.models import Model, Func
+from django.db.models import Model, Func, SlugField
 from django.db.models.fields import UUIDField, DateTimeField
-from django.db.models import (CharField, ImageField)
+from django.db.models import (CharField, ImageField, TextChoices, URLField)
+from django.utils.text import slugify
 
 
 class GenRandomUUID(Func):
@@ -15,7 +16,11 @@ class GenRandomUUID(Func):
 
 
 class UUIDBaseModel(Model):
-    id = UUIDField(primary_key=True, db_default=GenRandomUUID(), editable=False)
+    id = UUIDField(
+        primary_key=True,
+        db_default=GenRandomUUID(),
+        editable=False,
+    )
 
     class Meta:
         abstract = True
@@ -29,12 +34,6 @@ class CreatedBaseModel(UUIDBaseModel):
         abstract = True
 
 
-class CreatedCategoryModel(UUIDBaseModel):
-    name = CharField(max_length=155, blank=False)
-
-    def __str__(self):
-        return self.name
-
 class CreatedImageModel(UUIDBaseModel):
 
     @staticmethod
@@ -44,6 +43,44 @@ class CreatedImageModel(UUIDBaseModel):
         date_path = datetime.now().strftime("%Y/%m/%d")
         return f"/{model_name}/{date_path}/{filename}"
 
-    url = ImageField(upload_to=upload_to)
+    image = ImageField(upload_to=upload_to)
+
+    class Meta:
+        abstract = True
 
 
+class SlugBasedModel(UUIDBaseModel):
+    slug = SlugField(unique=True, editable=False)
+
+    class Meta:
+        abstract = True
+
+    def save(self, force_insert=False, force_update=False, using=None, update_fields=None):
+        if self.pk is None:
+            sourse = getattr(self, 'name', None) or getattr(self, 'title', None)
+
+            if sourse:
+                self.slug = slugify(sourse, allow_unicode=True)
+
+        super().save(force_insert, force_update, using, update_fields)
+
+    def __str__(self):
+        return self.slug
+
+
+class SocialLinkBase(Model):
+    class Platform(TextChoices):
+        FACEBOOK = 'facebook', 'Facebook'
+        INSTAGRAM = 'instagram', 'Instagram'
+        YOUTUBE = 'youtube', 'YouTube'
+        PINTEREST = 'pinterest', 'Pinterest'
+        X = 'x', 'X'
+
+    platform = CharField(
+        max_length=20,
+        choices=Platform.choices,
+    )
+    url = URLField(max_length=255)
+
+    class Meta:
+        abstract = True

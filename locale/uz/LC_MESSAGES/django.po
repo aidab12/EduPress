@@ -1,0 +1,123 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-11 17:39+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: main/models/courses.py:15
+msgid "Категория"
+msgstr "Toifa"
+
+#: main/models/courses.py:16
+msgid "Категории"
+msgstr "Toifalar"
+
+#: main/models/courses.py:33
+msgid "Начальный"
+msgstr "Boshlang‘ich"
+
+#: main/models/courses.py:34
+msgid "Средний"
+msgstr "O‘rta"
+
+#: main/models/courses.py:35
+msgid "Профессиональный"
+msgstr "Professional"
+
+#: main/models/courses.py:39
+msgid "Описание"
+msgstr ""
+
+#: main/models/courses.py:40
+msgid "Краткое описание"
+msgstr ""
+
+#: main/models/courses.py:43
+msgid "Эскиз"
+msgstr ""
+
+#: main/models/courses.py:44
+msgid "Превью видео"
+msgstr ""
+
+#: main/models/courses.py:45
+msgid "Продолжительность"
+msgstr ""
+
+#: main/models/courses.py:66
+msgid "Опубликован"
+msgstr "Yuklangan"
+
+#: main/models/courses.py:67
+msgid "Рекомендуемый"
+msgstr "Tavsiya etilgan"
+
+#: main/models/courses.py:70
+msgid "Курс"
+msgstr "Kurs"
+
+#: main/models/courses.py:71
+msgid "Курсы"
+msgstr "Kurslar"
+
+#: main/models/courses.py:99
+msgid "Зачислен"
+msgstr "Qabul qilingan"
+
+#: main/models/courses.py:100
+msgid "Проходит"
+msgstr "O‘qimoqda"
+
+#: main/models/courses.py:101
+msgid "Завершил"
+msgstr "Tugatgan"
+
+#: main/models/courses.py:102
+msgid "Отменено"
+msgstr "Bekor qilingan"
+
+#: main/models/courses.py:158
+msgid "Question"
+msgstr "Savol"
+
+#: main/models/courses.py:159
+msgid "Введите вопрос"
+msgstr "Savolni kiriting"
+
+#: main/models/courses.py:162
+msgid "Answer"
+msgstr "Javob"
+
+#: main/models/courses.py:163
+msgid "Введите ответ на вопрос"
+msgstr "Savolga javobni kiriting"
+
+#: main/models/courses.py:168
+msgid "Display order"
+msgstr "Ko‘rsatish tartibi"
+
+#: main/models/courses.py:169
+msgid "Порядок отображения в списке FAQ"
+msgstr "FAQ ro‘yxatida ko‘rsatish tartibi"
+
+#: main/models/courses.py:173
+msgid "FAQ"
+msgstr "FAQ"
+
+#: main/models/courses.py:174
+msgid "FAQs"
+msgstr "FAQlar"

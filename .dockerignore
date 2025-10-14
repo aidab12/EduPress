@@ -2,3 +2,5 @@ db.sqlite3
 Makefile
 TODO
 .venv
+.idea
+.TODO.txt
