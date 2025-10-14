@@ -5,6 +5,7 @@ from django.contrib.auth.models import (AbstractBaseUser, PermissionsMixin, Base
 from main.models import UUIDBaseModel
 from django.utils.translation import gettext_lazy as _
 
+
 class UserManager(BaseUserManager):
 
     def create_user(self, email, password, **extra_fields):
@@ -24,7 +25,8 @@ class UserManager(BaseUserManager):
 
 
 class User(AbstractBaseUser, PermissionsMixin, UUIDBaseModel):
-    class UserType(TextChoices):
+    class Type(TextChoices):
+        # TODO moderator
         TEACHER = 'teacher', _('Teacher')
         STUDENT = 'student', _('Student')
 
@@ -32,7 +34,7 @@ class User(AbstractBaseUser, PermissionsMixin, UUIDBaseModel):
     last_name = CharField(max_length=100)
     email = EmailField(unique=True)
     username = CharField(max_length=150, unique=True)
-    type = CharField(max_length=50, choices=UserType.choices, default=None) # type: ignore
+    type = CharField(max_length=50, choices=Type.choices, default=Type.STUDENT)
     is_active = BooleanField(default=True)
     is_staff = BooleanField(default=False)
     created_at = DateField(auto_now_add=True)

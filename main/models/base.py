@@ -41,7 +41,7 @@ class CreatedImageModel(UUIDBaseModel):
         model_name = instance.__class__.__name__.lower()
         filename = os.path.basename(filename)
         date_path = datetime.now().strftime("%Y/%m/%d")
-        return f"/{model_name}/{date_path}/{filename}"
+        return f"{model_name}/{date_path}/{filename}"
 
     image = ImageField(upload_to=upload_to)
 

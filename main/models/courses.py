@@ -3,13 +3,13 @@ from django.db import models
 from django.db.models import (CharField, TextField, ImageField,
                               ForeignKey, PROTECT, ManyToManyField, PositiveSmallIntegerField,
                               DateTimeField, CASCADE, URLField, TextChoices, FloatField,
-                              DecimalField, BooleanField, FileField, JSONField, Sum)
+                              DecimalField, BooleanField, FileField, JSONField, Sum, PositiveIntegerField)
 from django.utils.translation import gettext_lazy as _
 from django_ckeditor_5.fields import CKEditor5Field
 
 from .base import CreatedBaseModel, UUIDBaseModel, SlugBasedModel
 
-from video_encoding.fields import VideoField 
+from video_encoding.fields import VideoField
 
 NULLABLE = {'blank': True, 'null': True}
 
@@ -24,20 +24,18 @@ def lesson_upload_path(model, file) -> str:
 
 class CourseCategory(SlugBasedModel):
     name = CharField(max_length=155)
+    total_course_count = PositiveIntegerField(db_default=0)
 
     class Meta:
         verbose_name = _("Категория")
         verbose_name_plural = _("Категории")
         ordering = ['name']
 
-    def total_courses(self):
-        return Course.objects.filter(category=self).count()
-
     def __str__(self):
         return self.name
 
 
-class Language(UUIDBaseModel):
+class Language(UUIDBaseModel):  # TODO add fixtures
     code = CharField(max_length=15, unique=True)
     name = CharField(max_length=100)
 
@@ -48,7 +46,7 @@ class Language(UUIDBaseModel):
 class Course(CreatedBaseModel, SlugBasedModel):
     class Level(TextChoices):
         BEGINNER = 'beginner', _('Начальный')
-        INTERMEDITE = 'intermediate', _('Средний')
+        INTERMEDIATE = 'intermediate', _('Средний')
         PROFESSIONAL = 'professional', _('Профессиональный')
 
     # Основные
@@ -66,7 +64,8 @@ class Course(CreatedBaseModel, SlugBasedModel):
     category = ForeignKey('main.CourseCategory', PROTECT, related_name="course")
     language = ForeignKey('main.Language', PROTECT, related_name="course")
     subtitles = ForeignKey('main.Language', PROTECT, **NULLABLE, related_name='course_sub')
-    authors = ManyToManyField('main.Instructor', related_name='author_course', verbose_name='Владелец курса')
+    authors = ManyToManyField('main.Instructor', related_name='courses', verbose_name='Владелец курса')
+    students = ManyToManyField('main.User', limit_choices_to={'type': 'student'}, related_name='courses')
 
     # Доп. мета
     level = CharField(max_length=25, choices=Level.choices, default=Level.BEGINNER)  # type: ignore
@@ -82,7 +81,8 @@ class Course(CreatedBaseModel, SlugBasedModel):
 
     # Управление публикацией
     is_published = BooleanField(default=False, verbose_name=_("Опубликован"))
-    is_featured = BooleanField(**NULLABLE, editable=False, verbose_name=_("Рекомендованный"))
+
+    # is_featured = BooleanField(**NULLABLE, editable=False, verbose_name=_("Рекомендованный"))
 
     def course_rating(self):
         course_rating = CourseRating.objects.filter(course=self).aggregate(avg_rating=models.Avg('rating'))
@@ -92,8 +92,10 @@ class Course(CreatedBaseModel, SlugBasedModel):
         return CourseRating.objects.filter(course=self).count()
 
     def total_enrolled_students(self):
-        total_enrolled_students = Enrollment.objects.filter(course=self).count()
-        return total_enrolled_students
+        return self.enrollments.count()
+
+        # total_enrolled_students = Enrollment.objects.filter(course=self).count()
+        # return total_enrolled_students
 
     def course_authors(self):
         return self.authors.all()
@@ -107,23 +109,25 @@ class Course(CreatedBaseModel, SlugBasedModel):
         return self.title
 
 
-class CourseModul(CreatedBaseModel):
-    course = ForeignKey('main.Course', CASCADE, related_name='course_moduls')
-    order = PositiveSmallIntegerField(default=1)
+class Section(CreatedBaseModel):
+    course = ForeignKey('main.Course', CASCADE, related_name='sections')
+    order_number = PositiveSmallIntegerField(default=1)
     title = CharField(max_length=155)
+    lectures_count = PositiveSmallIntegerField(default=0)
 
-    def duration_summ(self):
-        return Lesson.objects.filter(course=self).aggregate(total=Sum('duration'))['total'] or 0
+    # duration = # TODO
+
+    # def duration_summ(self):
+    #     return self.lectures.aggregate(total=Sum('duration'))['total'] or 0
+    # return Lecture.objects.filter(course=self).aggregate(total=Sum('duration'))['total'] or 0
 
 
-
-class Lesson(CreatedBaseModel):
-    lessons_count = PositiveSmallIntegerField(default=1)
+class Lecture(CreatedBaseModel):
     title = CharField(max_length=155, verbose_name='Название курса')
-    description = CKEditor5Field(verbose_name='Описание урока')
+    # description = CKEditor5Field(verbose_name='Описание урока') ?
     preview = ImageField(upload_to=lesson_upload_path, verbose_name='Превью урока', **NULLABLE)
     video_link = URLField(verbose_name='Ссылка на видео', **NULLABLE)
-    course = ForeignKey('main.Course', CASCADE, verbose_name='Курс', related_name='course')
+    section = ForeignKey('main.Section', CASCADE, verbose_name='Курс', related_name='lectures')
     lesson_author = FileField(
         upload_to=lesson_upload_path,
         validators=[
@@ -162,18 +166,18 @@ class Enrollment(CreatedBaseModel):  # (Запись на курс)
         COMPLETED = "completed", _("Завершил")
         CANCELLED = "cancelled", _("Отменено")
 
-    student = ForeignKey('users.User', CASCADE, limit_choices_to={'type': 'student'})
+    student = ForeignKey('users.User', CASCADE, related_name='enrollments', limit_choices_to={'type': 'student'})
     course = ForeignKey('main.Course', CASCADE, related_name='enrollments')
-    enrollment_date = DateTimeField(auto_now_add=True)  # дата зачисления
+    # enrollment_date = DateTimeField(auto_now_add=True)  # дата зачисления
     completion_status = CharField(
         max_length=20,
         choices=CompletionStatus.choices,  # ignore: type
         default=CompletionStatus.ENROLLED
     )
-    enrolled_time = DateTimeField(auto_now_add=True)
+    # enrolled_time = DateTimeField(auto_now_add=True)
 
 
-class CourseTest(CreatedBaseModel):
+class CourseTest(CreatedBaseModel):  # TODO ?
     course = ForeignKey('main.Course', CASCADE, 'quizzes')
     test_name = CharField(max_length=255)
     description = TextField(blank=True)
@@ -181,8 +185,8 @@ class CourseTest(CreatedBaseModel):
                                            validators=[MaxValueValidator(100)])  # максимальное количество баллов
 
 
-class CourseProgress(CreatedBaseModel):
-    pass
+# class CourseProgress(CreatedBaseModel):
+#     pass
 
 
 class CourseResult(CreatedBaseModel):
@@ -192,18 +196,18 @@ class CourseResult(CreatedBaseModel):
     score = PositiveSmallIntegerField(default=0)
 
 
-class CourseRating(UUIDBaseModel):
+class CourseRating(UUIDBaseModel, CreatedBaseModel):
     course = ForeignKey('main.Course', CASCADE, related_name='rating')
     student = ForeignKey('users.User', CASCADE, related_name='rating')
     rating = FloatField(default=0, validators=[MinValueValidator(3), MaxValueValidator(4.5)])
     reviews = TextField(null=True)
-    created_at = DateTimeField(auto_now_add=True)
+    # created_at = DateTimeField(auto_now_add=True)
 
-
-class StudentFavoriteCourse(CreatedBaseModel):
-    course = ForeignKey('main.Course', CASCADE)
-    student = ForeignKey('users.User', CASCADE)
-    status = BooleanField(default=False)
-
-    class Meta:
-        verbose_name_plural = _("Избранные курсы студента")
+#
+# class StudentFavoriteCourse(CreatedBaseModel):
+#     course = ForeignKey('main.Course', CASCADE)
+#     student = ForeignKey('users.User', CASCADE)
+#     status = BooleanField(default=False)
+#
+#     class Meta:
+#         verbose_name_plural = _("Избранные курсы студента")
