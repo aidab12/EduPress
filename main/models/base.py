@@ -1,8 +1,7 @@
 import os
 from datetime import datetime
 from django.db.models import Model, Func, SlugField
-from django.db.models.fields import UUIDField, DateTimeField
-from django.db.models import (CharField, ImageField, TextChoices, URLField)
+from django.db.models import (CharField, ImageField, TextChoices, URLField, UUIDField, DateTimeField, PositiveSmallIntegerField)
 from django.utils.text import slugify
 
 
@@ -83,6 +82,13 @@ class SocialLinkBase(Model):
         choices=Platform.choices,
     )
     url = URLField(max_length=255)
+
+    class Meta:
+        abstract = True
+
+
+class OrderNumberBaseModel(Model):
+    order_number = PositiveSmallIntegerField(default=1)
 
     class Meta:
         abstract = True

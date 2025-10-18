@@ -7,21 +7,17 @@ from django.db.models import (CharField, TextField, ImageField,
 from django.utils.translation import gettext_lazy as _
 from django_ckeditor_5.fields import CKEditor5Field
 
-from main.models.base import CreatedBaseModel, UUIDBaseModel, SlugBasedModel
+from main.models.base import CreatedBaseModel, UUIDBaseModel, SlugBasedModel, MAX_CHAR_LENGTH, OrderNumberBaseModel
 from video_encoding.fields import VideoField
 
 NULLABLE = {'blank': True, 'null': True}
 
 
 def course_upload_path(model, file) -> str:
-    return f'course/{model.title}/{file}'
+    model_name = model.__class__.__name__.lower()
+    return f'course/{model_name}/%Y/%m/%d/{file}'
 
 
-def lesson_upload_path(model, file) -> str:
-    return f'lesson/{model.title}/{file}'
-
-
-# TODO upload_path ni 1ta qilish
 
 class CourseCategory(SlugBasedModel):
     name = CharField(max_length=155)
@@ -64,7 +60,7 @@ class Course(CreatedBaseModel, SlugBasedModel):
     # Категории / язык / авторы
     category = ForeignKey('main.CourseCategory', PROTECT, related_name="course")
     language = ForeignKey('main.Language', PROTECT, related_name="course")
-    subtitles = ForeignKey('main.Language', PROTECT, **NULLABLE, related_name='courses_subtitles')  # TODO manytomany
+    subtitles = ManyToManyField('main.Language', related_name='courses_subtitles')
     authors = ManyToManyField('main.Instructor', related_name='authored_courses', verbose_name=_('Владелецы курса'))
     students = ManyToManyField('users.User', limit_choices_to={'type': 'student'}, related_name='enrolled_courses')
 
@@ -110,9 +106,8 @@ class Course(CreatedBaseModel, SlugBasedModel):
         return self.title
 
 
-class Section(CreatedBaseModel):
+class Section(CreatedBaseModel, OrderNumberBaseModel):
     course = ForeignKey('main.Course', CASCADE, related_name='sections')
-    order_number = PositiveSmallIntegerField(default=1)  # TODO OrderNumberBaseModel
     title = CharField(max_length=155)
     lectures_count = PositiveSmallIntegerField(default=0)
     # duration = # TODO
@@ -129,13 +124,12 @@ class Lecture(CreatedBaseModel):
 
 
 class LectureContent(CreatedBaseModel):
-    # title = # TODO
-
-    lecture = ForeignKey('main.Lecture', CASCADE, related_name='lecture_content')
+    title = CharField(max_length=MAX_CHAR_LENGTH)
+    lecture = ForeignKey('main.Lecture', CASCADE, related_name='lecture_contents')
     duration = FloatField(editable=False, null=True)
-    video = VideoField(upload_to=lesson_upload_path, duration_field='duration', verbose_name=_("Видео к урок"))
+    video = VideoField(upload_to=course_upload_path, duration_field='duration', verbose_name=_("Видео к урок"))
     file = FileField(
-        upload_to=lesson_upload_path,
+        upload_to=course_upload_path,
         validators=[
             FileExtensionValidator(
                 allowed_extensions=['.jpg', 'jpeg', 'png', '.pdf', '.docx']

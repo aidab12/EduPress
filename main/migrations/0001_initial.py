@@ -236,8 +236,8 @@ class Migration(migrations.Migration):
                 ('updated_at', models.DateTimeField(auto_now=True)),
                 ('created_at', models.DateTimeField(auto_now_add=True)),
                 ('duration', models.FloatField(editable=False, null=True)),
-                ('video', video_encoding.fields.VideoField(upload_to=main.models.courses.lesson_upload_path, verbose_name='Видео к урок')),
-                ('file', models.FileField(upload_to=main.models.courses.lesson_upload_path, validators=[django.core.validators.FileExtensionValidator(allowed_extensions=['.jpg', 'jpeg', 'png', '.pdf', '.docx'])], verbose_name='Файл к уроку')),
+                ('video', video_encoding.fields.VideoField(upload_to=main.models.courses.course_upload_path, verbose_name='Видео к урок')),
+                ('file', models.FileField(upload_to=main.models.courses.course_upload_path, validators=[django.core.validators.FileExtensionValidator(allowed_extensions=['.jpg', 'jpeg', 'png', '.pdf', '.docx'])], verbose_name='Файл к уроку')),
                 ('lecture', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='lecture_content', to='main.lecture')),
             ],
             options={

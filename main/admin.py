@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from main.models import CourseCategory, Course, AboutCompany, Blog, BlogCategory
+from main.models import CourseCategory, Course, AboutCompany, Blog, BlogCategory, LectureContent, Lecture
 from main.models.contacts import CompanySocialLink
 
 
@@ -8,8 +8,18 @@ from main.models.contacts import CompanySocialLink
 class CourseCategoryAdmin(admin.ModelAdmin):
     list_display = ['name', 'slug']
 
+
 # class ModuleInline(admin.StackedInline):
 #     model = Module
+
+
+class LectureContentInline(admin.TabularInline):
+    model = LectureContent
+
+
+@admin.register(Lecture)
+class LectureAdmin(admin.ModelAdmin):
+    inlines = (LectureContentInline,)
 
 
 @admin.register(Course)
@@ -17,7 +27,7 @@ class CourseAdmin(admin.ModelAdmin):
     list_display = ('title', 'category', 'created_at')
     list_filter = ('category', 'created_at')
     search_fields = ('title', 'overview')
-    # inlines = (ModuleInline,)
+    # inlines = (LectureContentInline,)
 
 
 class SocialLinkInline(admin.TabularInline):
@@ -33,7 +43,6 @@ class AboutCompanyAdmin(admin.ModelAdmin):
 
 @admin.register(Blog)
 class BlogAdmin(admin.ModelAdmin):
-
 
     def save_model(self, request, obj, form, change):
         if not change:
