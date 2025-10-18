@@ -19,7 +19,7 @@ Task
 3. category, course, instructor, blog, tag modellarini yozish +
 6. AboutUs model yozish +
 7. contact us apini chiqarish (adminkada korishi kerak, is_read bolsin)
-
+8. fixtures - language, course, section, lecture, LectureContent, topic, instructor, user, CourseCategory
 
 
 
