@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'location_field.apps.DefaultConfig',
     'video_encoding',
     'django_celery_results',
-    'django_minio_backend'
+    # 'django_minio_backend'
 ]
 
 MIDDLEWARE = [
@@ -149,14 +149,14 @@ MINIO_PUBLIC_BUCKETS = [
     'backend-dev-public',
 ]
 
-STORAGES = {  # -- ADDED IN Django 5.1
-    "default": {
-        "BACKEND": "django_minio_backend.models.MinioBackend",
-    },
-    "staticfiles": {  # -- OPTIONAL
-        "BACKEND": "django_minio_backend.models.MinioBackendStatic",
-    },
-}
+# STORAGES = {  # -- ADDED IN Django 5.1
+#     "default": {
+#         "BACKEND": "django_minio_backend.models.MinioBackend",
+#     },
+#     "staticfiles": {  # -- OPTIONAL
+#         "BACKEND": "django_minio_backend.models.MinioBackendStatic",
+#     },
+# }
 MINIO_MEDIA_FILES_BUCKET = 'media'  # replacement for MEDIA_ROOT
 MINIO_STATIC_FILES_BUCKET = 'static'  # replacement for STATIC_ROOT
 MINIO_PUBLIC_BUCKETS.append(MINIO_STATIC_FILES_BUCKET)

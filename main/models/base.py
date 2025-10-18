@@ -1,11 +1,15 @@
 import os
+import uuid
 from datetime import datetime
-from django.db.models import Model, Func, SlugField
-from django.db.models import (CharField, ImageField, TextChoices, URLField, UUIDField, DateTimeField, PositiveSmallIntegerField)
+
+from django.db.models import (Model, Func, SlugField, CharField, ImageField, TextChoices, URLField, UUIDField,
+                              DateTimeField,
+                              PositiveSmallIntegerField)
+from django.db.models.expressions import DatabaseDefault
 from django.utils.text import slugify
 
-
 MAX_CHAR_LENGTH = 155
+
 
 class GenRandomUUID(Func):
     """
@@ -17,11 +21,7 @@ class GenRandomUUID(Func):
 
 
 class UUIDBaseModel(Model):
-    id = UUIDField(
-        primary_key=True,
-        db_default=GenRandomUUID(),
-        editable=False,
-    )
+    id = UUIDField(primary_key=True, default=uuid.uuid4, db_default=GenRandomUUID(), editable=False)
 
     class Meta:
         abstract = True
@@ -56,14 +56,14 @@ class SlugBasedModel(UUIDBaseModel):
     class Meta:
         abstract = True
 
-    def save(self, force_insert=False, force_update=False, using=None, update_fields=None):
-        if self.pk is None:
-            sourse = getattr(self, 'name', None) or getattr(self, 'title', None)
+    def save(self, *, force_insert=False, force_update=False, using=None, update_fields=None):
+        if self.pk is None or not self.slug:
+            source = getattr(self, 'name', None) or getattr(self, 'title', None)
 
-            if sourse:
-                self.slug = slugify(sourse, allow_unicode=True)
+            if source:
+                self.slug = slugify(source, allow_unicode=True)
 
-        super().save(force_insert, force_update, using, update_fields)
+        super().save(force_insert=force_insert, force_update=force_update, using=using, update_fields=update_fields)
 
     def __str__(self):
         return self.slug

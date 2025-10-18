@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.db.models.expressions import DatabaseDefault
 
 from main.models import CourseCategory, Course, AboutCompany, Blog, BlogCategory, LectureContent, Lecture
 from main.models.contacts import CompanySocialLink
@@ -13,7 +14,7 @@ class CourseCategoryAdmin(admin.ModelAdmin):
 #     model = Module
 
 
-class LectureContentInline(admin.TabularInline):
+class LectureContentInline(admin.StackedInline):
     model = LectureContent
 
 

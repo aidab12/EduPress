@@ -120,7 +120,6 @@ class Section(CreatedBaseModel, OrderNumberBaseModel):
 class Lecture(CreatedBaseModel):
     title = CharField(max_length=155, verbose_name=_('Название курса'))
     section = ForeignKey('main.Section', CASCADE, verbose_name='Курс', related_name='lectures')
-    # duration = # TODO
 
 
 class LectureContent(CreatedBaseModel):
