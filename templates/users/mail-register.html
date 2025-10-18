@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добро пожаловать!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: normal;
+        }
+        .content {
+            padding: 30px 20px;
+            text-align: center;
+        }
+        .greeting {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .message {
+            color: #666;
+            margin-bottom: 30px;
+        }
+        .confirm-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .info {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-size: 14px;
+            color: #666;
+        }
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #999;
+            border-top: 1px solid #eee;
+        }
+        @media (max-width: 600px) {
+            .container { margin: 0 10px; }
+            .content { padding: 20px 15px; }
+            .confirm-btn { display: block; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎉 Добро пожаловать!</h1>
+        </div>
+
+        <div class="content">
+            <div class="greeting">Здравствуйте, {{ first_name }}!</div>
+
+            <div class="message">
+                Спасибо за регистрацию на нашем сайте.<br>
+                Для завершения регистрации подтвердите ваш email.
+            </div>
+
+            <a href="#" class="confirm-btn">
+                Подтвердить Email
+            </a>
+
+            <div class="info">
+                <strong>Ваш аккаунт:</strong><br>
+                Email: {{ email }}<br>
+                Дата: {{ data_reg }}
+            </div>
+
+            <div class="info">
+                ⏰ Ссылка действительна 24 часа<br>
+                ❓ Вопросы? Пишите: support@site.com
+            </div>
+        </div>
+
+        <div class="footer">
+            Если вы не регистрировались, проигнорируйте это письмо.<br>
+            <a href="#" style="color: #667eea;">Отписаться</a>
+        </div>
+    </div>
+</body>
+</html>

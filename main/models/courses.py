@@ -35,7 +35,7 @@ class CourseCategory(SlugBasedModel):
         return self.name
 
 
-class Language(UUIDBaseModel):  # TODO add fixtures
+class Language(UUIDBaseModel):
     code = CharField(max_length=15, unique=True)
     name = CharField(max_length=100)
 
@@ -55,17 +55,17 @@ class Course(CreatedBaseModel, SlugBasedModel):
     overview = CharField(max_length=500, verbose_name=_("Краткое описание"))  # Краткий обзор курса
 
     # Мультимедиа / превью
-    preview_img = ImageField(upload_to=course_upload_path, verbose_name=_("Эскиз"))
+    preview_img = ImageField(upload_to=course_upload_path, **NULLABLE, verbose_name=_("Эскиз"))
     preview_video = FileField(upload_to=course_upload_path, **NULLABLE, verbose_name=_("Превью видео"))
-    duration = DecimalField(max_digits=3, decimal_places=1, verbose_name=_("Продолжительность"),
+    duration = DecimalField(max_digits=3, decimal_places=1, **NULLABLE, verbose_name=_("Продолжительность"),
                             help_text="Продолжительность в часах")
 
     # Категории / язык / авторы
     category = ForeignKey('main.CourseCategory', PROTECT, related_name="course")
     language = ForeignKey('main.Language', PROTECT, related_name="course")
-    subtitles = ForeignKey('main.Language', PROTECT, **NULLABLE, related_name='course_sub')
-    authors = ManyToManyField('main.Instructor', related_name='courses', verbose_name='Владелец курса')
-    students = ManyToManyField('main.User', limit_choices_to={'type': 'student'}, related_name='courses')
+    subtitles = ForeignKey('main.Language', PROTECT, **NULLABLE, related_name='courses_subtitles') #TODO manytomany
+    authors = ManyToManyField('main.Instructor', related_name='authored_courses', verbose_name=_('Владелецы курса'))
+    students = ManyToManyField('users.User', limit_choices_to={'type': 'student'}, related_name='enrolled_courses')
 
     # Доп. мета
     level = CharField(max_length=25, choices=Level.choices, default=Level.BEGINNER)  # type: ignore
@@ -123,30 +123,33 @@ class Section(CreatedBaseModel):
 
 
 class Lecture(CreatedBaseModel):
-    title = CharField(max_length=155, verbose_name='Название курса')
-    # description = CKEditor5Field(verbose_name='Описание урока') ?
-    preview = ImageField(upload_to=lesson_upload_path, verbose_name='Превью урока', **NULLABLE)
-    video_link = URLField(verbose_name='Ссылка на видео', **NULLABLE)
+    title = CharField(max_length=155, verbose_name=_('Название курса'))
     section = ForeignKey('main.Section', CASCADE, verbose_name='Курс', related_name='lectures')
-    lesson_author = FileField(
+
+
+class LectureContent(CreatedBaseModel):
+
+    lecture = ForeignKey('main.Lecture', CASCADE, related_name='lecture_content')
+    duration = models.FloatField(editable=False, null=True)
+    video = VideoField(
+        upload_to=lesson_upload_path,
+        duration_field='duration',
+        verbose_name=_("Видео к урок")
+    )
+    file = FileField(
         upload_to=lesson_upload_path,
         validators=[
             FileExtensionValidator(
-                allowed_extensions=['.jpg', 'jpeg', 'png', '.pdf', '.mp4', '.mov', '.avi']
+                allowed_extensions=['.jpg', 'jpeg', 'png', '.pdf', '.docx']
             )
-        ]
+        ],
+        verbose_name=_("Файл к уроку")
     )
 
 
-class LessonContent(CreatedBaseModel):
-    created_by = ForeignKey('main.Instructor', PROTECT, related_name='lesson_contents')
-    lesson = ForeignKey('main.Lesson', CASCADE, related_name='lesson_contents')
-    video_url = URLField(max_length=255)
-
-
-class LessonComment(UUIDBaseModel):
-    lesson = ForeignKey('main.Lesson', CASCADE, related_name='lesson_comment')
-    user = ForeignKey('users.User', CASCADE, related_name='lesson_comments')
+class CourseComment(UUIDBaseModel):
+    course = ForeignKey('main.Course', CASCADE, related_name='course_comment')
+    user = ForeignKey('users.User', CASCADE, related_name='course_comments')
     comment_text = TextField()
     created_at = DateTimeField(auto_now_add=True)
 
@@ -168,13 +171,11 @@ class Enrollment(CreatedBaseModel):  # (Запись на курс)
 
     student = ForeignKey('users.User', CASCADE, related_name='enrollments', limit_choices_to={'type': 'student'})
     course = ForeignKey('main.Course', CASCADE, related_name='enrollments')
-    # enrollment_date = DateTimeField(auto_now_add=True)  # дата зачисления
     completion_status = CharField(
         max_length=20,
-        choices=CompletionStatus.choices,  # ignore: type
+        choices=CompletionStatus.choices,
         default=CompletionStatus.ENROLLED
     )
-    # enrolled_time = DateTimeField(auto_now_add=True)
 
 
 class CourseTest(CreatedBaseModel):  # TODO ?
@@ -196,12 +197,11 @@ class CourseResult(CreatedBaseModel):
     score = PositiveSmallIntegerField(default=0)
 
 
-class CourseRating(UUIDBaseModel, CreatedBaseModel):
+class CourseRating(CreatedBaseModel):
     course = ForeignKey('main.Course', CASCADE, related_name='rating')
     student = ForeignKey('users.User', CASCADE, related_name='rating')
     rating = FloatField(default=0, validators=[MinValueValidator(3), MaxValueValidator(4.5)])
-    reviews = TextField(null=True)
-    # created_at = DateTimeField(auto_now_add=True)
+    reviews = TextField(**NULLABLE)
 
 #
 # class StudentFavoriteCourse(CreatedBaseModel):

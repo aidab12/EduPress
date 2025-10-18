@@ -1,6 +1,7 @@
 import os.path
 from datetime import timedelta
 from pathlib import Path
+
 from dotenv import load_dotenv
 
 load_dotenv('.env')
@@ -38,6 +39,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'django_ckeditor_5',
     'location_field.apps.DefaultConfig',
+    'video_encoding',
+    'django_celery_results',
+    'django_minio_backend'
 ]
 
 MIDDLEWARE = [
@@ -120,16 +124,46 @@ USE_I18N = True
 
 USE_TZ = True
 
-
 MAX_UPLOAD_SIZE = 5 * 1024 * 1024  # 5 MB
 ALLOWED_FILE_EXTENSIONS = [".jpg", ".jpeg", ".png", ".pdf", ".mp4"]
-
 
 STATIC_URL = "static/"
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # Папка, где физически будут лежать файлы
-MEDIA_URL = "media/" # Через какой URL их можно будет открыть
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Папка, где физически будут лежать файлы
+MEDIA_URL = "media/"  # Через какой URL их можно будет открыть
+
+# _______________________________MinIO_______________________________#
+
+MINIO_ENDPOINT = os.getenv('MINIO_ENDPOINT')
+MINIO_ACCESS_KEY = os.getenv('MINIO_ACCESS_KEY')
+MINIO_SECRET_KEY = os.getenv('MINIO_SECRET_KEY')
+MINIO_USE_HTTPS = False
+MINIO_URL_EXPIRY_HOURS = timedelta(days=7)  # Default is 7 days (longest) if not defined
+MINIO_CONSISTENCY_CHECK_ON_START = False
+
+MINIO_PRIVATE_BUCKETS = [
+    'backend-dev-private',
+]
+MINIO_PUBLIC_BUCKETS = [
+    'backend-dev-public',
+]
+
+STORAGES = {  # -- ADDED IN Django 5.1
+    "default": {
+        "BACKEND": "django_minio_backend.models.MinioBackend",
+    },
+    "staticfiles": {  # -- OPTIONAL
+        "BACKEND": "django_minio_backend.models.MinioBackendStatic",
+    },
+}
+MINIO_MEDIA_FILES_BUCKET = 'media'  # replacement for MEDIA_ROOT
+MINIO_STATIC_FILES_BUCKET = 'static'  # replacement for STATIC_ROOT
+MINIO_PUBLIC_BUCKETS.append(MINIO_STATIC_FILES_BUCKET)
+MINIO_PRIVATE_BUCKETS.append(MINIO_MEDIA_FILES_BUCKET)
+MINIO_BUCKET_CHECK_ON_SAVE = True  # Default: True // Creates bucket if missing, then save
+
+# _______________________________END_______________________________#
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
@@ -140,7 +174,7 @@ AUTHENTICATION_BACKENDS = [
 REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework.authentication.SessionAuthentication',
+        # 'rest_framework.authentication.SessionAuthentication',
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     )
 }
@@ -173,10 +207,16 @@ EMAIL_USE_SSL = True
 EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_PASSWORD')
 
+# My Global Settings
+# MAX_STRING_LENGTH =
+
 # От кого будут приходить письма
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 AUTH_USER_MODEL = 'users.User'
+
+CELERY_BROKER_URL = os.getenv('REDIS_LOCATION')
+CELERY_RESULT_BACKEND = os.getenv('POSTGRES_DATABASE')
 
 JAZZMIN_SETTINGS = {
     # title of the window (Will default to current_admin_site.site_title if absent or None)

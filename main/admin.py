@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from main.models import CourseCategory, Course, AboutCompany
+from main.models import CourseCategory, Course, AboutCompany, Blog, BlogCategory
 from main.models.contacts import CompanySocialLink
 
 
@@ -29,3 +29,18 @@ class SocialLinkInline(admin.TabularInline):
 class AboutCompanyAdmin(admin.ModelAdmin):
     list_display = ('title', 'email')
     inlines = SocialLinkInline,
+
+
+@admin.register(Blog)
+class BlogAdmin(admin.ModelAdmin):
+
+
+    def save_model(self, request, obj, form, change):
+        if not change:
+            obj.created_by = request.user
+        super().save_model(request, obj, form, change)
+
+
+@admin.register(BlogCategory)
+class BlogCategoryAdmin(admin.ModelAdmin):
+    pass

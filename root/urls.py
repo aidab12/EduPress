@@ -21,9 +21,10 @@ urlpatterns = i18n_patterns(
     path('api-token-auth/', views.obtain_auth_token),
     path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('api-auth/', include('rest_framework.urls')),
 
-    path('account/', include('main.urls')),
-    path('users/', include('users.urls', namespace='users')),
-    path("i18n/", include("django.conf.urls.i18n")),
+path('account/', include('main.urls')),
+path('users/', include('users.urls', namespace='users')),
+path("i18n/", include("django.conf.urls.i18n")),
 
 ) + static(MEDIA_URL, document_root=MEDIA_ROOT) + static(STATIC_URL, document_root=STATIC_ROOT)

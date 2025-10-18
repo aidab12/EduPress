@@ -6,6 +6,8 @@ from django.db.models import (CharField, ImageField, TextChoices, URLField)
 from django.utils.text import slugify
 
 
+MAX_CHAR_LENGTH = 155
+
 class GenRandomUUID(Func):
     """
     Represents the PostgreSQL gen_random_uuid() function.
