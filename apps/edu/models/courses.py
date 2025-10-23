@@ -18,7 +18,6 @@ def course_upload_path(model, file) -> str:
     return f'course/{model_name}/%Y/%m/%d/{file}'
 
 
-
 class CourseCategory(SlugBasedModel):
     name = CharField(max_length=155)
     total_course_count = PositiveIntegerField(db_default=0, **NULLABLE)
@@ -71,7 +70,8 @@ class Course(CreatedBaseModel, SlugBasedModel):
     language = ForeignKey('edu.Language', PROTECT, related_name="course")
     subtitles = ManyToManyField('edu.Language', blank=True, related_name='courses_subtitles')
     authors = ManyToManyField('edu.Instructor', related_name='authored_courses', verbose_name=_('Владелецы курса'))
-    students = ManyToManyField('user.User', limit_choices_to={'type': 'student'}, blank=True, related_name='enrolled_courses', verbose_name=_('Студенты'))
+    students = ManyToManyField('user.User', limit_choices_to={'type': 'student'}, blank=True,
+                               related_name='enrolled_courses', verbose_name=_('Студенты'))
 
     # Доп. мета
     level = CharField(max_length=25, choices=Level.choices, default=Level.BEGINNER)  # type: ignore
@@ -119,6 +119,7 @@ class Section(CreatedBaseModel, OrderNumberBaseModel):
     course = ForeignKey('edu.Course', CASCADE, related_name='sections')
     title = CharField(max_length=155)
     lectures_count = PositiveSmallIntegerField(**NULLABLE, editable=False)
+
     # duration = # TODO
 
     # def duration_summ(self):
@@ -132,12 +133,14 @@ class Section(CreatedBaseModel, OrderNumberBaseModel):
     def __str__(self):
         return self.title
 
+
 class Lecture(CreatedBaseModel):
     title = CharField(max_length=155, verbose_name=_('Название урока'))
     section = ForeignKey('edu.Section', CASCADE, verbose_name='Урок', related_name='lectures')
 
     def __str__(self):
         return self.title
+
 
 class LectureContent(CreatedBaseModel):
     title = CharField(max_length=MAX_CHAR_LENGTH, **NULLABLE)
@@ -186,7 +189,7 @@ class Enrollment(CreatedBaseModel):  # (Запись на курс)
     course = ForeignKey('edu.Course', CASCADE, related_name='enrollments')
     completion_status = CharField(
         max_length=20,
-        choices=CompletionStatus.choices, # type: ignore
+        choices=CompletionStatus.choices,  # type: ignore
         default=CompletionStatus.ENROLLED
     )
 

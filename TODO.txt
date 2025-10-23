@@ -26,6 +26,8 @@ Task
     lecture,
     LectureContent,
     topic+, instructor+, user+, CourseCategory+
+9. model larni sort qilib chiqarish (adminka)
+
 
 
 

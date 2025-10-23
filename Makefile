@@ -4,3 +4,8 @@ mig:
 
 msg:
 	python3 manage.py makemessages -l uz -l ru -l en
+
+#compilemsg
+
+# loaddata
+
