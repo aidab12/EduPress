@@ -30,8 +30,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # My apps
-    'main.apps.MainConfig',
-    'users',
+    'apps.edu',
+    'apps.user',
 
     # Third-Party apps
     'drf_spectacular',
@@ -41,7 +41,9 @@ INSTALLED_APPS = [
     'location_field.apps.DefaultConfig',
     'video_encoding',
     'django_celery_results',
-    # 'django_minio_backend'
+    # 'django_minio_backend',
+    'django_extensions',
+    'nested_admin',
 ]
 
 MIDDLEWARE = [
@@ -104,6 +106,8 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+AUTH_USER_MODEL = 'user.User'
 
 # Internationalization
 
@@ -174,9 +178,12 @@ AUTHENTICATION_BACKENDS = [
 REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        # 'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
         'rest_framework_simplejwt.authentication.JWTAuthentication',
-    )
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
 }
 
 SPECTACULAR_SETTINGS = {
@@ -213,10 +220,8 @@ EMAIL_HOST_PASSWORD = os.getenv('EMAIL_PASSWORD')
 # От кого будут приходить письма
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
-AUTH_USER_MODEL = 'users.User'
-
 CELERY_BROKER_URL = os.getenv('REDIS_LOCATION')
-CELERY_RESULT_BACKEND = os.getenv('POSTGRES_DATABASE')
+CELERY_RESULT_BACKEND = os.getenv('REDIS_LOCATION')
 
 JAZZMIN_SETTINGS = {
     # title of the window (Will default to current_admin_site.site_title if absent or None)
@@ -318,9 +323,9 @@ JAZZMIN_SETTINGS = {
     # Custom icons for side menu apps/models See https://fontawesome.com/icons?d=gallery&m=free&v=5.0.0,5.0.1,5.0.10,5.0.11,5.0.12,5.0.13,5.0.2,5.0.3,5.0.4,5.0.5,5.0.6,5.0.7,5.0.8,5.0.9,5.1.0,5.1.1,5.2.0,5.3.0,5.3.1,5.4.0,5.4.1,5.4.2,5.13.0,5.12.0,5.11.2,5.11.1,5.10.0,5.9.0,5.8.2,5.8.1,5.7.2,5.7.1,5.7.0,5.6.3,5.5.0,5.4.2
     # for the full list of 5.13.0 free icon classes
     "icons": {
-        "auth": "fas fa-users-cog",
+        "auth": "fas fa-user-cog",
         "auth.user": "fas fa-user",
-        "auth.Group": "fas fa-users",
+        "auth.Group": "fas fa-user",
     },
     # Icons that are used when one is not manually specified
     "default_icon_parents": "fas fa-chevron-circle-right",

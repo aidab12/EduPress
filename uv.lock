@@ -284,6 +284,18 @@ wheels = [
 ]
 
 [[package]]
+name = "django-extensions"
+version = "4.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "django" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/6d/b3/ed0f54ed706ec0b54fd251cc0364a249c6cd6c6ec97f04dc34be5e929eac/django_extensions-4.1.tar.gz", hash = "sha256:7b70a4d28e9b840f44694e3f7feb54f55d495f8b3fa6c5c0e5e12bcb2aa3cdeb", size = 283078, upload-time = "2025-04-11T01:15:39.617Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/64/96/d967ca440d6a8e3861120f51985d8e5aec79b9a8bdda16041206adfe7adc/django_extensions-4.1-py3-none-any.whl", hash = "sha256:0699a7af28f2523bf8db309a80278519362cd4b6e1fd0a8cd4bf063e1e023336", size = 232980, upload-time = "2025-04-11T01:15:37.701Z" },
+]
+
+[[package]]
 name = "django-filter"
 version = "25.1"
 source = { registry = "https://pypi.org/simple" }
@@ -329,6 +341,18 @@ wheels = [
 ]
 
 [[package]]
+name = "django-nested-admin"
+version = "4.1.5"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "python-monkey-business" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/a2/ad/034ac57871605199810f034b8a130ff42d117064b1ac6126cafdc8963860/django-nested-admin-4.1.5.tar.gz", hash = "sha256:31119f8b2cecbd0f0f35800376b328b5907cda116b6be5520bd8b690f8f55aee", size = 422881, upload-time = "2025-10-20T15:49:10.292Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/71/a2/84c78f4716eb5ef0092cad8d48e6e0d7d0a12f125315a67912b738634fae/django_nested_admin-4.1.5-py3-none-any.whl", hash = "sha256:bbbb1bde300b854224cc1ee7dd2007c604b9ccaf4cbc92ac6723d07cdc41324a", size = 466558, upload-time = "2025-10-20T15:49:08.801Z" },
+]
+
+[[package]]
 name = "django-video-encoding"
 version = "1.0.0"
 source = { registry = "https://pypi.org/simple" }
@@ -369,7 +393,24 @@ wheels = [
 ]
 
 [[package]]
-name = "EduPress"
+name = "drf-spectacular"
+version = "0.28.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "django" },
+    { name = "djangorestframework" },
+    { name = "inflection" },
+    { name = "jsonschema" },
+    { name = "pyyaml" },
+    { name = "uritemplate" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/da/b9/741056455aed00fa51a1df41fad5ad27c8e0d433b6bf490d4e60e2808bc6/drf_spectacular-0.28.0.tar.gz", hash = "sha256:2c778a47a40ab2f5078a7c42e82baba07397bb35b074ae4680721b2805943061", size = 237849, upload-time = "2024-11-30T08:49:02.355Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/fb/66/c2929871393b1515c3767a670ff7d980a6882964a31a4ca2680b30d7212a/drf_spectacular-0.28.0-py3-none-any.whl", hash = "sha256:856e7edf1056e49a4245e87a61e8da4baff46c83dbc25be1da2df77f354c7cb4", size = 103928, upload-time = "2024-11-30T08:48:57.288Z" },
+]
+
+[[package]]
+name = "edupress"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
@@ -378,10 +419,12 @@ dependencies = [
     { name = "django" },
     { name = "django-celery-results" },
     { name = "django-ckeditor-5" },
+    { name = "django-extensions" },
     { name = "django-filter" },
     { name = "django-jazzmin" },
     { name = "django-location-field" },
     { name = "django-minio-backend" },
+    { name = "django-nested-admin" },
     { name = "django-video-encoding" },
     { name = "djangorestframework" },
     { name = "djangorestframework-simplejwt" },
@@ -401,10 +444,12 @@ requires-dist = [
     { name = "django", specifier = ">=5.2.6" },
     { name = "django-celery-results", specifier = ">=2.6.0" },
     { name = "django-ckeditor-5", specifier = ">=0.2.18" },
+    { name = "django-extensions", specifier = ">=4.1" },
     { name = "django-filter", specifier = ">=25.1" },
     { name = "django-jazzmin", specifier = ">=3.0.1" },
     { name = "django-location-field", specifier = ">=2.7.3" },
     { name = "django-minio-backend", specifier = ">=3.8.1" },
+    { name = "django-nested-admin", specifier = ">=4.1.5" },
     { name = "django-video-encoding", specifier = ">=1.0.0" },
     { name = "djangorestframework", specifier = ">=3.16.1" },
     { name = "djangorestframework-simplejwt", specifier = ">=5.5.1" },
@@ -415,23 +460,6 @@ requires-dist = [
     { name = "python-dotenv", specifier = ">=1.1.1" },
     { name = "redis", specifier = ">=6.4.0" },
     { name = "six", specifier = ">=1.17.0" },
-]
-
-[[package]]
-name = "drf-spectacular"
-version = "0.28.0"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "django" },
-    { name = "djangorestframework" },
-    { name = "inflection" },
-    { name = "jsonschema" },
-    { name = "pyyaml" },
-    { name = "uritemplate" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/da/b9/741056455aed00fa51a1df41fad5ad27c8e0d433b6bf490d4e60e2808bc6/drf_spectacular-0.28.0.tar.gz", hash = "sha256:2c778a47a40ab2f5078a7c42e82baba07397bb35b074ae4680721b2805943061", size = 237849, upload-time = "2024-11-30T08:49:02.355Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/fb/66/c2929871393b1515c3767a670ff7d980a6882964a31a4ca2680b30d7212a/drf_spectacular-0.28.0-py3-none-any.whl", hash = "sha256:856e7edf1056e49a4245e87a61e8da4baff46c83dbc25be1da2df77f354c7cb4", size = 103928, upload-time = "2024-11-30T08:48:57.288Z" },
 ]
 
 [[package]]
@@ -698,6 +726,15 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/f6/b0/4bc07ccd3572a2f9df7e6782f52b0c6c90dcbb803ac4a167702d7d0dfe1e/python_dotenv-1.1.1.tar.gz", hash = "sha256:a8a6399716257f45be6a007360200409fce5cda2661e3dec71d23dc15f6189ab", size = 41978, upload-time = "2025-06-24T04:21:07.341Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/5f/ed/539768cf28c661b5b068d66d96a2f155c4971a5d55684a514c1a0e0dec2f/python_dotenv-1.1.1-py3-none-any.whl", hash = "sha256:31f23644fe2602f88ff55e1f5c79ba497e01224ee7737937930c448e4d0e24dc", size = 20556, upload-time = "2025-06-24T04:21:06.073Z" },
+]
+
+[[package]]
+name = "python-monkey-business"
+version = "1.1.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/21/bc/a6182bb30701d0df25ad336f2dd74343447032e0995025ba82079a94f745/python-monkey-business-1.1.0.tar.gz", hash = "sha256:8393839cc741415ed5ddc2bd58e2d4ce07f966a7d26b7aebff19dcec64818edc", size = 4270, upload-time = "2024-07-11T16:35:00.117Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/43/a2/b6a5cbd5822b4d049adfedf496ce0908480e5a41722fda7b7ffaacb086d6/python_monkey_business-1.1.0-py2.py3-none-any.whl", hash = "sha256:15b4f603c749ba9a7b4f1acd36af023a6c5ba0f7e591c945f8253f0ef44bf389", size = 4670, upload-time = "2024-07-11T16:34:58.565Z" },
 ]
 
 [[package]]

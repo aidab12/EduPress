@@ -1,0 +1,137 @@
+[
+  {
+    "model": "edu.coursecategory",
+    "pk": "a1a1a1a1-1111-4aaa-aaaa-111111111111",
+    "fields": {
+      "slug": "development",
+      "name": "Development",
+      "total_course_count": 0
+    }
+  },
+  {
+    "model": "edu.coursecategory",
+    "pk": "b2b2b2b2-2222-4bbb-bbbb-222222222222",
+    "fields": {
+      "slug": "business",
+      "name": "Business",
+      "total_course_count": 0
+    }
+  },
+  {
+    "model": "edu.coursecategory",
+    "pk": "c3c3c3c3-3333-4ccc-cccc-333333333333",
+    "fields": {
+      "slug": "finance-accounting",
+      "name": "Finance & Accounting",
+      "total_course_count": 0
+    }
+  },
+  {
+    "model": "edu.coursecategory",
+    "pk": "d4d4d4d4-4444-4ddd-dddd-444444444444",
+    "fields": {
+      "slug": "it-software",
+      "name": "IT & Software",
+      "total_course_count": 0
+    }
+  },
+  {
+    "model": "edu.coursecategory",
+    "pk": "e5e5e5e5-5555-4eee-eeee-555555555555",
+    "fields": {
+      "slug": "office-productivity",
+      "name": "Office Productivity",
+      "total_course_count": 0
+    }
+  },
+  {
+    "model": "edu.coursecategory",
+    "pk": "f6f6f6f6-6666-4fff-ffff-666666666666",
+    "fields": {
+      "slug": "personal-development",
+      "name": "Personal Development",
+      "total_course_count": 0
+    }
+  },
+  {
+    "model": "edu.coursecategory",
+    "pk": "a7a7a7a7-7777-4aaa-aaaa-777777777777",
+    "fields": {
+      "slug": "design",
+      "name": "Design",
+      "total_course_count": 0
+    }
+  },
+  {
+    "model": "edu.coursecategory",
+    "pk": "b8b8b8b8-8888-4bbb-bbbb-888888888888",
+    "fields": {
+      "slug": "marketing",
+      "name": "Marketing",
+      "total_course_count": 0
+    }
+  },
+  {
+    "model": "edu.coursecategory",
+    "pk": "c9c9c9c9-9999-4ccc-cccc-999999999999",
+    "fields": {
+      "slug": "lifestyle",
+      "name": "Lifestyle",
+      "total_course_count": 0
+    }
+  },
+  {
+    "model": "edu.coursecategory",
+    "pk": "d0d0d0d0-0000-4ddd-dddd-000000000000",
+    "fields": {
+      "slug": "photography-video",
+      "name": "Photography & Video",
+      "total_course_count": 0
+    }
+  },
+  {
+    "model": "edu.coursecategory",
+    "pk": "e1e1e1e1-1111-4eee-eeee-111111111111",
+    "fields": {
+      "slug": "health-fitness",
+      "name": "Health & Fitness",
+      "total_course_count": 0
+    }
+  },
+  {
+    "model": "edu.coursecategory",
+    "pk": "f2f2f2f2-2222-4fff-ffff-222222222222",
+    "fields": {
+      "slug": "music",
+      "name": "Music",
+      "total_course_count": 0
+    }
+  },
+  {
+    "model": "edu.coursecategory",
+    "pk": "a3a3a3a3-3333-4aaa-aaaa-333333333333",
+    "fields": {
+      "slug": "teaching-academics",
+      "name": "Teaching & Academics",
+      "total_course_count": 0
+    }
+  },
+  {
+    "model": "edu.coursecategory",
+    "pk": "b4b4b4b4-4444-4bbb-bbbb-444444444444",
+    "fields": {
+      "slug": "data-science",
+      "name": "Data Science",
+      "total_course_count": 0
+    }
+  },
+  {
+    "model": "edu.coursecategory",
+    "pk": "c5c5c5c5-5555-4ccc-cccc-555555555555",
+    "fields": {
+      "slug": "language-learning",
+      "name": "Language Learning",
+      "total_course_count": 0
+    }
+  }
+]

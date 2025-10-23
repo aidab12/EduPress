@@ -1,0 +1,142 @@
+[
+{
+  "model": "edu.topic",
+  "pk": "17268844-474c-4cd2-bd28-6ff651e7e568",
+  "fields": {
+    "name": "Cloud Computing"
+  }
+},
+{
+  "model": "edu.topic",
+  "pk": "1c739c0f-512a-45d3-a5f1-feade908dfff",
+  "fields": {
+    "name": "Тестирование"
+  }
+},
+{
+  "model": "edu.topic",
+  "pk": "2f2f3d51-fb9b-401f-901c-f48c809676fb",
+  "fields": {
+    "name": "Архитектура ПО"
+  }
+},
+{
+  "model": "edu.topic",
+  "pk": "469855fc-2267-493d-86a9-23b75176ed3a",
+  "fields": {
+    "name": "Алгоритмы"
+  }
+},
+{
+  "model": "edu.topic",
+  "pk": "4de88093-c59e-4a78-833d-3d36e690319b",
+  "fields": {
+    "name": "Мобильная разработка"
+  }
+},
+{
+  "model": "edu.topic",
+  "pk": "5ea34e9a-a547-43e8-88dc-3ae92ed2afe7",
+  "fields": {
+    "name": "React"
+  }
+},
+{
+  "model": "edu.topic",
+  "pk": "742de962-8e03-4028-972a-fd521a7d1530",
+  "fields": {
+    "name": "Blockchain"
+  }
+},
+{
+  "model": "edu.topic",
+  "pk": "78c785f8-d000-4d4b-bba2-11ca5065cd06",
+  "fields": {
+    "name": "DevOps"
+  }
+},
+{
+  "model": "edu.topic",
+  "pk": "8318f17e-a31f-4690-929b-37f13b62afbf",
+  "fields": {
+    "name": "Vue.js"
+  }
+},
+{
+  "model": "edu.topic",
+  "pk": "84fa0575-3bdd-4c2b-99f6-db99b3766364",
+  "fields": {
+    "name": "Машинное обучение"
+  }
+},
+{
+  "model": "edu.topic",
+  "pk": "94c797dd-92be-4ba6-9b5b-14809b6792ec",
+  "fields": {
+    "name": "Базы данных"
+  }
+},
+{
+  "model": "edu.topic",
+  "pk": "a4589a36-8506-4357-9420-b3af771d92dc",
+  "fields": {
+    "name": "Frontend"
+  }
+},
+{
+  "model": "edu.topic",
+  "pk": "ab9201f4-4a49-4b07-a5f6-41d66c058bdf",
+  "fields": {
+    "name": "Python"
+  }
+},
+{
+  "model": "edu.topic",
+  "pk": "d34a2576-e1ad-4616-ab3f-60b162f56943",
+  "fields": {
+    "name": "Data Science"
+  }
+},
+{
+  "model": "edu.topic",
+  "pk": "dba64c85-8d1d-4d16-85ee-9355cc9bde09",
+  "fields": {
+    "name": "Backend"
+  }
+},
+{
+  "model": "edu.topic",
+  "pk": "dbd06725-7d7c-4869-b0fc-2a418c18fe34",
+  "fields": {
+    "name": "Кибербезопасность"
+  }
+},
+{
+  "model": "edu.topic",
+  "pk": "e25444eb-acc8-4f64-b684-c3a1190546ab",
+  "fields": {
+    "name": "Разработка"
+  }
+},
+{
+  "model": "edu.topic",
+  "pk": "e380c6b4-1fef-4e76-9932-f31fb390d3ce",
+  "fields": {
+    "name": "JavaScript"
+  }
+},
+{
+  "model": "edu.topic",
+  "pk": "f45cbcf9-5171-4bc9-9a8a-631804e37c86",
+  "fields": {
+    "name": "Веб-разработка"
+  }
+},
+{
+  "model": "edu.topic",
+  "pk": "faae3f8d-ec91-48f8-839b-bc23147ac552",
+  "fields": {
+    "name": "UI/UX дизайн"
+  }
+}
+]

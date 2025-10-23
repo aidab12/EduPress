@@ -1,0 +1,818 @@
+[
+{
+  "model": "edu.language",
+  "pk": "023530b4-e46f-47e0-8ec2-542cf6462963",
+  "fields": {
+    "code": "ms",
+    "name": "Malay"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "06eb930b-746a-48b6-bb46-776fd85fe87d",
+  "fields": {
+    "code": "af",
+    "name": "Afrikaans"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "071675c4-d2e2-44a3-af46-40f407b869b6",
+  "fields": {
+    "code": "sl",
+    "name": "Slovenian"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "09759d8a-442c-41f3-8c22-a2438f90a1a0",
+  "fields": {
+    "code": "fr",
+    "name": "French"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "140158e0-adb8-44d9-91f9-56b7b71ae0d6",
+  "fields": {
+    "code": "az",
+    "name": "Azerbaijani"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "160d315b-6ff2-480b-9cc7-316342f15313",
+  "fields": {
+    "code": "it",
+    "name": "Italian"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "1784116c-240a-4e08-87b7-c36e8b5cdaa0",
+  "fields": {
+    "code": "mi",
+    "name": "Maori"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "1b4b1a0d-2688-40a5-a6b9-a398d3ea4486",
+  "fields": {
+    "code": "ko",
+    "name": "Korean"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "211046c6-450b-4d0d-bcce-c196ba04e346",
+  "fields": {
+    "code": "ps",
+    "name": "Pashto"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "21151b3e-5a5e-4e0e-861e-62f7cdda311e",
+  "fields": {
+    "code": "no",
+    "name": "Norwegian"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "24800676-440e-4b04-8c23-0d046c178ab1",
+  "fields": {
+    "code": "kk",
+    "name": "Kazakh"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "2731b229-9687-41e7-9da2-d278a49f3c71",
+  "fields": {
+    "code": "mt",
+    "name": "Maltese"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "2ab3035c-b798-488d-9bef-9e3bb6cc49c9",
+  "fields": {
+    "code": "ne",
+    "name": "Nepali"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "2e19b30c-05d9-4032-9a11-776947290c1c",
+  "fields": {
+    "code": "tg",
+    "name": "Tajik"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "30a72e11-9438-46f0-b4b2-f1bf03c3d4e0",
+  "fields": {
+    "code": "co",
+    "name": "Corsican"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "31fe22a0-1573-478e-b923-56db9f0ffe7a",
+  "fields": {
+    "code": "hy",
+    "name": "Armenian"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "35be331a-76ac-4295-9deb-6018f51a9d19",
+  "fields": {
+    "code": "ja",
+    "name": "Japanese"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "37ebfc9a-e99d-4eeb-b0f3-77b27acd72ae",
+  "fields": {
+    "code": "eo",
+    "name": "Esperanto"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "3ab39143-a30f-4d60-8626-275289e0d575",
+  "fields": {
+    "code": "te",
+    "name": "Telugu"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "3c0e699c-13c8-427a-b716-9ac5d4029803",
+  "fields": {
+    "code": "ta",
+    "name": "Tamil"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "3cfde39b-fe1a-4b76-947c-f7bae38ca5b0",
+  "fields": {
+    "code": "bg",
+    "name": "Bulgarian"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "410e66e1-94dc-4c54-9828-ff9933ebce6a",
+  "fields": {
+    "code": "cs",
+    "name": "Czech"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "44589d16-2058-44a6-a08f-7a059b2815bb",
+  "fields": {
+    "code": "ro",
+    "name": "Romanian"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "44e8cc62-8a18-4f15-9abd-bc1f358e669a",
+  "fields": {
+    "code": "sq",
+    "name": "Albanian"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "4ad2e79c-4f49-41ee-8a33-352573d59d78",
+  "fields": {
+    "code": "yo",
+    "name": "Yoruba"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "50d33cc1-6d26-4130-a3ac-2e78d8782ecc",
+  "fields": {
+    "code": "ml",
+    "name": "Malayalam"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "5199b137-eb70-4ffc-809c-636e07c10a39",
+  "fields": {
+    "code": "hmn",
+    "name": "Hmong"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "5472f88a-c7be-40ea-93e5-a0305c6006b5",
+  "fields": {
+    "code": "ha",
+    "name": "Hausa"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "56dc3927-0296-45ad-88b0-42029d517ba7",
+  "fields": {
+    "code": "zh",
+    "name": "Chinese"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "57f1e336-0e0d-4196-9688-2ae4a42f7a03",
+  "fields": {
+    "code": "ka",
+    "name": "Georgian"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "58de5953-61b1-4473-a98e-8a35275a1582",
+  "fields": {
+    "code": "cy",
+    "name": "Welsh"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "5a47260a-7fed-4d6d-93e0-c08cbe52148c",
+  "fields": {
+    "code": "jv",
+    "name": "Javanese"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "5b95c70b-9d84-4039-8480-426f6246d9a6",
+  "fields": {
+    "code": "pl",
+    "name": "Polish"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "5bd115eb-c40a-4e8f-984e-51e582337d7f",
+  "fields": {
+    "code": "ceb",
+    "name": "Cebuano"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "5c0ef5af-9a81-4fa3-a5f0-fffc2e1c0eda",
+  "fields": {
+    "code": "id",
+    "name": "Indonesian"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "5c7215f8-e712-4de5-9943-5af86dd1f98c",
+  "fields": {
+    "code": "la",
+    "name": "Latin"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "5d5cc428-a7fa-47bb-a260-1e547da5ecaa",
+  "fields": {
+    "code": "lt",
+    "name": "Lithuanian"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "60bdf084-5219-44cb-9e45-86d94f881955",
+  "fields": {
+    "code": "ky",
+    "name": "Kyrgyz"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "60f3efa7-53f5-4698-a0a1-e091d2f03386",
+  "fields": {
+    "code": "am",
+    "name": "Amharic"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "62e242e5-a6a5-4d72-a849-fce9bb86c2c0",
+  "fields": {
+    "code": "ar",
+    "name": "Arabic"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "636e1db7-a64d-48fe-b581-38831dd714ee",
+  "fields": {
+    "code": "es",
+    "name": "Spanish"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "63eafe40-0366-4328-bfbc-1d7115e4fb1e",
+  "fields": {
+    "code": "he",
+    "name": "Hebrew"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "662ac5c1-8acb-40d9-a161-b4fa23ef8344",
+  "fields": {
+    "code": "en",
+    "name": "English"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "66c99ad1-d31f-4c18-bf77-4524361ad309",
+  "fields": {
+    "code": "mn",
+    "name": "Mongolian"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "693991ed-8f77-492d-8214-1c437f52994c",
+  "fields": {
+    "code": "da",
+    "name": "Danish"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "6b54c6d6-af09-417c-a7d4-92e291e54302",
+  "fields": {
+    "code": "fo",
+    "name": "Faroese"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "6c11b9fb-a6cf-4a7a-b555-985342202c00",
+  "fields": {
+    "code": "sm",
+    "name": "Samoan"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "6dbc0888-aaae-4caa-891f-670668107c2f",
+  "fields": {
+    "code": "fil",
+    "name": "Filipino"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "6ddce962-dd45-49d1-a8ed-d0bda17707cf",
+  "fields": {
+    "code": "uz",
+    "name": "Uzbek"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "713be114-f478-43c8-905c-5fce5c51cf41",
+  "fields": {
+    "code": "bs",
+    "name": "Bosnian"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "73b92e01-3dfa-49b0-8953-4c7bb2cc98fa",
+  "fields": {
+    "code": "sd",
+    "name": "Sindhi"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "743c5ca8-4a6c-45dc-8fe6-485795c5ae14",
+  "fields": {
+    "code": "bn",
+    "name": "Bengali"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "78356251-22fb-4c66-976e-4ca35c95e21b",
+  "fields": {
+    "code": "si",
+    "name": "Sinhala"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "80428a02-3531-46cb-85ae-ccf5535901c0",
+  "fields": {
+    "code": "fi",
+    "name": "Finnish"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "80ad31a0-477d-49fd-a5cd-e903ae97d4ed",
+  "fields": {
+    "code": "mk",
+    "name": "Macedonian"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "8322ffea-7490-4366-ba0b-36f9f35af9bf",
+  "fields": {
+    "code": "sr",
+    "name": "Serbian"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "8485ee96-9723-4304-90e9-0fba52cf0045",
+  "fields": {
+    "code": "sw",
+    "name": "Swahili"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "85249c7a-0032-4c61-adcb-60c076e19a62",
+  "fields": {
+    "code": "ur",
+    "name": "Urdu"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "854d18c1-ee0b-4800-a4c3-a352fac5daa9",
+  "fields": {
+    "code": "ga",
+    "name": "Irish"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "8638b90f-088a-485f-946a-c65a451c01a7",
+  "fields": {
+    "code": "ku",
+    "name": "Kurdish"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "86e35ec6-28b4-47c9-9e3a-226d4b0365cf",
+  "fields": {
+    "code": "xh",
+    "name": "Xhosa"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "8807a7b0-642d-4dcb-a987-61da77b63707",
+  "fields": {
+    "code": "lv",
+    "name": "Latvian"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "881db516-4041-46f1-95b9-9e40ceb9f0b9",
+  "fields": {
+    "code": "gl",
+    "name": "Galician"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "8a304ac3-1705-4eb2-bcf9-8d198028553d",
+  "fields": {
+    "code": "is",
+    "name": "Icelandic"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "8cabc83d-d3be-4a69-a972-948a4d358ec0",
+  "fields": {
+    "code": "km",
+    "name": "Khmer"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "8db668d0-c0ee-42be-a619-1a36ca3c2b50",
+  "fields": {
+    "code": "mr",
+    "name": "Marathi"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "8e1204e4-7cc0-4a90-ba75-ff85f113be9d",
+  "fields": {
+    "code": "fa",
+    "name": "Persian"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "8fd1cd26-8a81-4735-a562-535577fa73e0",
+  "fields": {
+    "code": "ig",
+    "name": "Igbo"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "90ca76dc-686e-4b8f-b94e-d67c1dbf60bb",
+  "fields": {
+    "code": "haw",
+    "name": "Hawaiian"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "9523cee3-7413-4d47-afdd-df9fd8e9ad49",
+  "fields": {
+    "code": "ru",
+    "name": "Russian"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "9b9ddd25-f596-49c6-8fd4-b02ad7c34956",
+  "fields": {
+    "code": "hu",
+    "name": "Hungarian"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "9bbbbbc0-37f4-474b-a523-8ecc748186e4",
+  "fields": {
+    "code": "sk",
+    "name": "Slovak"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "9e3b0520-7782-4ab2-b969-086d0f361bff",
+  "fields": {
+    "code": "eu",
+    "name": "Basque"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "9f17b29f-2879-4db7-b9ed-c133b4b7d533",
+  "fields": {
+    "code": "tk",
+    "name": "Turkmen"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "a19ee61c-8cbd-4e5b-8ed8-437691416883",
+  "fields": {
+    "code": "br",
+    "name": "Breton"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "a73d1911-e8a8-40fb-a4dd-b2b7a7ab830d",
+  "fields": {
+    "code": "zu",
+    "name": "Zulu"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "a75e2086-45c4-430a-bf49-948b6b6180e4",
+  "fields": {
+    "code": "el",
+    "name": "Greek"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "acb11d14-90b5-41fa-941c-c7738d5f568b",
+  "fields": {
+    "code": "pa",
+    "name": "Punjabi"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "ae739649-1e2f-42c5-a645-8dfc0944533e",
+  "fields": {
+    "code": "uk",
+    "name": "Ukrainian"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "b05305ed-6239-4fda-ba59-f89fcd56924c",
+  "fields": {
+    "code": "fy",
+    "name": "Frisian"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "b06aea06-010b-48ff-bac9-5c3c7385e8d5",
+  "fields": {
+    "code": "th",
+    "name": "Thai"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "b893b016-d21f-4526-9e2c-fbed299db16c",
+  "fields": {
+    "code": "hi",
+    "name": "Hindi"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "b8bf9c0e-627b-417f-9452-3cd38e6bd87c",
+  "fields": {
+    "code": "hr",
+    "name": "Croatian"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "ba1ed1b4-c803-4f69-9808-d2e8dc862586",
+  "fields": {
+    "code": "yi",
+    "name": "Yiddish"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "bcb6a6b7-8ef4-4d67-bf61-7483df98b84b",
+  "fields": {
+    "code": "ca",
+    "name": "Catalan"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "be1cbb57-438b-40f1-8b35-8ba2290d0203",
+  "fields": {
+    "code": "sv",
+    "name": "Swedish"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "bf33ab66-0dcc-4679-a72c-6a60cf5cf850",
+  "fields": {
+    "code": "my",
+    "name": "Burmese"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "c04ce6e3-c880-4dcc-b672-724f6620901f",
+  "fields": {
+    "code": "lo",
+    "name": "Lao"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "c2bd5903-5c56-4794-b741-ca5307a03a2a",
+  "fields": {
+    "code": "mg",
+    "name": "Malagasy"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "c70824c8-81f7-4859-8306-d5092065cfc2",
+  "fields": {
+    "code": "nl",
+    "name": "Dutch"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "cc70e52b-72bc-4b3c-bb33-a346a46b47ef",
+  "fields": {
+    "code": "gd",
+    "name": "Scottish Gaelic"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "d0744cd3-c597-416d-9e82-cc8d9ae6ca22",
+  "fields": {
+    "code": "kn",
+    "name": "Kannada"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "d9510f82-1a0f-40c0-8db0-9ec78e278380",
+  "fields": {
+    "code": "et",
+    "name": "Estonian"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "db98ee8c-a20a-443f-a5a0-31f6e5a10068",
+  "fields": {
+    "code": "tr",
+    "name": "Turkish"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "dc64bd3d-9831-4136-8fe7-aff8220f786c",
+  "fields": {
+    "code": "pt",
+    "name": "Portuguese"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "e1f57a8a-f62b-4e2f-bfc5-1daad99639e9",
+  "fields": {
+    "code": "be",
+    "name": "Belarusian"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "e72871ff-a614-4a63-b04c-6bf8eed88a0d",
+  "fields": {
+    "code": "su",
+    "name": "Sundanese"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "edfa315e-d12b-4257-b350-eb857d1a9b39",
+  "fields": {
+    "code": "so",
+    "name": "Somali"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "f233800a-3812-41e7-af97-adf037e993c8",
+  "fields": {
+    "code": "lb",
+    "name": "Luxembourgish"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "f3035abf-c989-44b5-bd33-306ca3a646c8",
+  "fields": {
+    "code": "gu",
+    "name": "Gujarati"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "f3d30a5a-e742-4b64-b0aa-625ce58101d2",
+  "fields": {
+    "code": "de",
+    "name": "German"
+  }
+},
+{
+  "model": "edu.language",
+  "pk": "fcad0a03-3ec0-4a28-8225-72343801aa17",
+  "fields": {
+    "code": "vi",
+    "name": "Vietnamese"
+  }
+}
+]
