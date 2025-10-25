@@ -188,11 +188,12 @@ REST_FRAMEWORK = {
 }
 
 DJOSER = {
-    'PASSWORD_RESET_CONFIRM_URL': '#/password/reset/confirm/{uid}/{token}',
-    'USERNAME_RESET_CONFIRM_URL': '#/username/reset/confirm/{uid}/{token}',
-    'ACTIVATION_URL': '#/activate/{uid}/{token}',
+    'USER_CREATE_PASSWORD_RETYPE': True,
     'SEND_ACTIVATION_EMAIL': True,
-    'SERIALIZERS': {},
+    'SET_PASSWORD_RETYPE': True,
+    'PASSWORD_RESET_CONFIRM_RETYPE': True,
+    'TOKEN_MODEL': None,  # use only jwt
+    'ACTIVATION_URL': 'auth/verify/{uid}/{token}',
 }
 
 SPECTACULAR_SETTINGS = {
@@ -210,6 +211,7 @@ CACHES = {
 }
 
 SIMPLE_JWT = {
+    "AUTH_HEADER_TYPES": ('Bearer',),
     "ACCESS_TOKEN_LIFETIME": timedelta(days=90),
 }
 
@@ -222,11 +224,6 @@ EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_PASSWORD')
-
-# My Global Settings
-# MAX_STRING_LENGTH =
-
-# От кого будут приходить письма
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 CELERY_BROKER_URL = os.getenv('REDIS_LOCATION')
