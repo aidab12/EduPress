@@ -1,8 +1,7 @@
 from django.urls import path
 
-from apps.edu.api.views import (AboutUsListView, CourseCategoryDetailView,
-                                CourseCategoryListView, CourseCreateView,
-                                CourseDetailView, CourseListView)
+from edu.api.views import (AboutUsListView, CourseCategoryDetailView,
+                           CourseCategoryListView, CourseDetailView, CourseListCreateAPIView)
 
 app_name = 'edu'
 
@@ -11,7 +10,6 @@ urlpatterns = [
     path('category/', CourseCategoryListView.as_view(), name='category_list'),
     path('category/<str:pk>/', CourseCategoryDetailView.as_view(), name='category_detail'),
 
-    path('course/', CourseListView.as_view(), name='course_list'),
-    path('course/<str:pk>/', CourseDetailView.as_view(), name='course_detail'),
-    path('course/', CourseCreateView.as_view(), name='course_create'),
+    path('courses/', CourseListCreateAPIView.as_view(), name='course_list'),
+    path('courses/<str:pk>/', CourseDetailView.as_view(), name='course_detail'),
 ]

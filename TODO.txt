@@ -28,7 +28,8 @@ Task
     topic+, instructor+, user+, CourseCategory+
 9. model larni sort qilib chiqarish (adminka)
 10. Argon
-
+11. api/v1/auth/jwt/create/ -> api/v1/auth/login
+12. allow api
 
 
 

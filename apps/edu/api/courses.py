@@ -1,6 +1,6 @@
 from rest_framework.serializers import ModelSerializer
 
-from apps.edu.models import Course, CourseCategory
+from edu.models import Course, CourseCategory
 
 
 class CourseCategorySerializer(ModelSerializer):

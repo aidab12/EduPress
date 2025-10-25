@@ -1,10 +1,10 @@
 from django.contrib import admin
 from django.db.models.expressions import DatabaseDefault
 
-from apps.edu.models import (AboutCompany, Blog, BlogCategory, Course,
+from edu.models import (AboutCompany, Blog, BlogCategory, Course,
                              CourseCategory, Instructor, Lecture,
                              LectureContent, Section)
-from apps.edu.models.contacts import CompanySocialLink
+from edu.models.contacts import CompanySocialLink
 
 
 @admin.register(CourseCategory)

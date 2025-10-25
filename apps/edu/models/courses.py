@@ -11,7 +11,7 @@ from django.utils.translation import gettext_lazy as _
 from django_ckeditor_5.fields import CKEditor5Field
 from video_encoding.fields import VideoField
 
-from apps.edu.models.base import (MAX_CHAR_LENGTH, CreatedBaseModel,
+from edu.models.base import (MAX_CHAR_LENGTH, CreatedBaseModel,
                                   OrderNumberBaseModel, SlugBasedModel,
                                   UUIDBaseModel)
 

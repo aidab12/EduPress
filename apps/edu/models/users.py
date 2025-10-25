@@ -1,6 +1,6 @@
 from django.db.models import CharField, ImageField, TextField
 
-from apps.user.models import User
+from user.models import User
 
 
 class Instructor(User):

@@ -1,8 +1,8 @@
-from rest_framework.generics import CreateAPIView, ListAPIView, RetrieveAPIView
+from rest_framework.generics import CreateAPIView, ListAPIView, RetrieveAPIView, ListCreateAPIView
 
-from apps.edu.api.company import AboutUsSerializer
-from apps.edu.api.courses import CourseCategorySerializer, CourseSerializer
-from apps.edu.models import AboutCompany, Course, CourseCategory
+from edu.api.company import AboutUsSerializer
+from edu.api.courses import CourseCategorySerializer, CourseSerializer
+from edu.models import AboutCompany, Course, CourseCategory
 
 
 class CourseCategoryListView(ListAPIView):
@@ -22,7 +22,7 @@ class AboutUsListView(RetrieveAPIView):
         return AboutCompany.objects.filter(email__isnull=False).first()
 
 
-class CourseListView(ListAPIView):
+class CourseListCreateAPIView(ListCreateAPIView):
     queryset = Course.objects.all()
     serializer_class = CourseSerializer
 
@@ -31,7 +31,3 @@ class CourseDetailView(RetrieveAPIView):
     queryset = Course.objects.all()
     serializer_class = CourseSerializer
 
-
-class CourseCreateView(CreateAPIView):
-    queryset = Course.objects.all()
-    serializer_class = CourseSerializer

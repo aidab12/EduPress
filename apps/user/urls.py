@@ -1,7 +1,7 @@
 import djoser
 from django.urls import include, path, re_path
 
-from apps.user.views import ChangePasswordView, LoginAPIView, SignUpAPIView
+from user.views import ChangePasswordView, LoginAPIView, SignUpAPIView
 
 app_name = 'user'
 urlpatterns = [

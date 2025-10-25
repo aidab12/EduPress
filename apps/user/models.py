@@ -4,7 +4,7 @@ from django.db.models import (BooleanField, CharField, DateField, EmailField,
                               TextChoices, UUIDField)
 from django.utils.translation import gettext_lazy as _
 
-from apps.edu.models.base import UUIDBaseModel
+from edu.models.base import UUIDBaseModel
 
 
 class UserManager(BaseUserManager):

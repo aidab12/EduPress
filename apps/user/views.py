@@ -6,7 +6,7 @@ from rest_framework.status import HTTP_204_NO_CONTENT
 from rest_framework.views import APIView
 from rest_framework_simplejwt.tokens import RefreshToken
 
-from apps.user.api.serializers import (ChangePasswordSerializer,
+from user.api.serializers import (ChangePasswordSerializer,
                                        LoginSerializer, SignUpSerializer)
 
 

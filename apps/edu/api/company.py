@@ -1,6 +1,6 @@
 from rest_framework.serializers import ModelSerializer
 
-from apps.edu.models import AboutCompany
+from edu.models import AboutCompany
 
 
 class AboutUsSerializer(ModelSerializer):

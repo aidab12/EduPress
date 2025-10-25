@@ -4,7 +4,7 @@ from django.utils.translation import gettext_lazy as _
 from django_ckeditor_5.fields import CKEditor5Field
 from location_field.models.plain import PlainLocationField
 
-from apps.edu.models import CreatedBaseModel, SocialLinkBase, UUIDBaseModel
+from edu.models import CreatedBaseModel, SocialLinkBase, UUIDBaseModel
 
 
 class AboutCompany(UUIDBaseModel):

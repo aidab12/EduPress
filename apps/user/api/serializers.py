@@ -3,7 +3,7 @@ from django.contrib.auth.password_validation import validate_password
 from rest_framework import serializers
 from rest_framework.views import APIView
 
-from apps.user.models import User
+from user.models import User
 
 
 class SignUpSerializer(serializers.ModelSerializer):

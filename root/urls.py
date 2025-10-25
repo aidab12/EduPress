@@ -23,10 +23,7 @@ urlpatterns = [
     path("i18n/", include("django.conf.urls.i18n")),
 
     # My API
-    path('api/v1/', include('apps.edu.api.urls', namespace='courses')),
-    path('api/v1/', include('apps.user.urls', namespace='users')),
-    # _______
-
+    path('api/v1/', include('apps.urls')),
 ]
 
 urlpatterns += i18n_patterns(
