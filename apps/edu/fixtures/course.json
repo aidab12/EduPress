@@ -1,210 +1,210 @@
 [
-{
-  "model": "edu.course",
-  "pk": "485316c0-b1e5-4c63-ac9d-a2f676b7b72d",
-  "fields": {
-    "updated_at": "2025-10-22T12:01:57.201Z",
-    "created_at": "2025-10-22T12:01:57.201Z",
-    "slug": "программирование-на-python-отборный-материал",
-    "title": "Программирование на Python [Отборный материал]",
-    "overview": "Курс содержит полезный материал из основ языка. Также рассматриваются интересные библиотеки и технологии",
-    "description": "<p><strong>О курсе</strong><br><span style=\"color:oklch(0.29740.0362281.74);\">Курс содержит 3 модуля,&nbsp;в которых мы рассматриваем интересные технологии из основ языка,</span><br><span style=\"color:oklch(0.29740.0362281.74);\">после чего закрепляем всё на практике. 2-й модуль содержит практические примеры, также в этом</span><br><span style=\"color:oklch(0.29740.0362281.74);\">модуле рассматривается библиотека RICH, которая позволяет реализовать интерфейс в терминале.</span><br><span style=\"color:oklch(0.29740.0362281.74);\">В&nbsp;конце курса мы рассмотрим полезные книги, которые стоит изучить в дальнейшем.</span><br><br><strong>Что мы изучим?</strong><br><span style=\"color:oklch(0.29740.0362281.74);\">1. PyCharm - Настройка для удобной работы и преимущества над другими IDE</span><br><span style=\"color:oklch(0.29740.0362281.74);\">2. Работа с файлами Python в оперативной памяти. IO Python - Собираем файлы в ОЗУ</span><br><span style=\"color:oklch(0.29740.0362281.74);\">3. Создание собственных ботов - Pyautogui Python</span><br><span style=\"color:oklch(0.29740.0362281.74);\">4. Шифрование файлов PYTHON в ОПЕРАТИВНОЙ памяти | PyAesCrypt + IO</span><br><span style=\"color:oklch(0.29740.0362281.74);\">5. KeyBind Python - Вызываем функции через ГОРЯЧИЕ КЛАВИШИ</span><br><span style=\"color:oklch(0.29740.0362281.74);\">6. Lambda Python на русском за 5 минут | Лямбда выражения Python</span><br><span style=\"color:oklch(0.29740.0362281.74);\">7. Аннотации Python - Упрощаем работу с кодом</span><br><span style=\"color:oklch(0.29740.0362281.74);\">8. Декораторы Python на простых примерах</span><br><span style=\"color:oklch(0.29740.0362281.74);\">9. Замыкания в Python | Closure Python</span><br><span style=\"color:oklch(0.29740.0362281.74);\">10. Как найти ошибку в коде | Работа с отладчиком</span><br><span style=\"color:oklch(0.29740.0362281.74);\">11. Защитите свой код на Python от взлома - PYARMOR Обфускация</span><br><span style=\"color:oklch(0.29740.0362281.74);\">12. Как управлять мышью и клавиатурой Python (pynput). Все основы в одном видео</span><br><span style=\"color:oklch(0.29740.0362281.74);\">13. Кэширование PYTHON - Работа с LRU_CACHE для оптимизации программы</span><br><span style=\"color:oklch(0.29740.0362281.74);\">14. Переменные окружения Linux | Как безопасно хранить данные для проекта</span><br><span style=\"color:oklch(0.29740.0362281.74);\">15. Работа с Stub файлами Python. Для чего нужны и как использовать?!</span><br><span style=\"color:oklch(0.29740.0362281.74);\">16. RICH - Интерфейс в терминале PYTHON - Разметка, Стили, Панели</span><br><span style=\"color:oklch(0.29740.0362281.74);\">17. RICH - Интерфейс в терминале PYTHON - Таблицы, Прогресс бары, Блоки</span><br><span style=\"color:oklch(0.29740.0362281.74);\">18. SQLITE Python - Создаем форму для регистрации на PYQT5 и SQLITE3</span><br><span style=\"color:oklch(0.29740.0362281.74);\">19. Реверсинг Python программы, почему Python не безопасен</span><br><span style=\"color:oklch(0.29740.0362281.74);\">20. PYTHON книги которые сделают из тебя профессионала - лучшие книги PYTHON</span><br><span style=\"color:oklch(0.29740.0362281.74);\">21. ТОП 3 книги для PYTHON Профи | Книги PYTHON для опытных разработчиков</span><br><br><strong>Кому подойдет?</strong><br><span style=\"color:oklch(0.29740.0362281.74);\">Любым Python разработчикам, которые хотят узнать для себя что-то новое или же закрепить уже изученный</span><br><span style=\"color:oklch(0.29740.0362281.74);\">ранее материал. Данный курс содержит много интересных примеров,&nbsp;поэтому каждый сможет узнать для</span><br><span style=\"color:oklch(0.29740.0362281.74);\">себя что-то новое и получить неплохой результат.</span></p>",
-    "requirements": [],
-    "target_audience": [],
-    "preview_img": "course/course/%Y/%m/%d/introduction.png",
-    "preview_video": "course/course/%Y/%m/%d/Шаг_1_-_Что_такое_Django._Инструментальные_средства.mp4",
-    "duration": "2.0",
-    "category": "a1a1a1a1-1111-4aaa-aaaa-111111111111",
-    "language": "9523cee3-7413-4d47-afdd-df9fd8e9ad49",
-    "level": "all_levels",
-    "what_you_will_learn": [
-      "Работа с файлами Python в оперативной памяти используя IO Python",
-      "Создание собственных ботов с помощью библиотеки Pyautogui Python",
-      "Шифрование файлов Python в оперативной памяти с использованием PyAesCrypt и IO",
-      "Вызов функций через горячие клавиши с KeyBind Python",
-      "Использование лямбда-выражений в Python за 5 минут",
-      "Применение аннотаций Python для упрощения работы с кодом",
-      "Создание и использование декораторов Python на простых примерах",
-      "Работа с замыканиями в Python (Closure Python)",
-      "Поиск ошибок в коде и работа с отладчиком",
-      "Защита Python кода от взлома с помощью обфускации PYARMOR",
-      "Управление мышью и клавиатурой с помощью Python (pynput)",
-      "Кэширование в Python для оптимизации программы с LRU_CACHE",
-      "Работа с переменными окружения Linux для безопасного хранения данных проекта",
-      "Использование Stub файлов Python и их назначение",
-      "Основы реверсинга Python программ и вопросы безопасности",
-      "Создание Discord бота с автопостингом контента на Python",
-      "Обзор профессиональных Python книг для развития навыков",
-      "Создание интерфейсов в терминале с помощью библиотеки RICH",
-      "Работа с SQLite Python и создание форм регистрации на PYQT5 и SQLITE3",
-      "Создание Telegram бота с админкой и интерфейсом для управления ботами",
-      "Разработка Telegram бота с автопостингом в каналы",
-      "Подбор пароля к Excel документу на Python с использованием PyQt5",
-      "ТОП 3 книги для профессиональных Python разработчиков"
-    ],
-    "is_free": true,
-    "price": "0.00",
-    "is_published": false,
-    "subtitles": [
-      "662ac5c1-8acb-40d9-a161-b4fa23ef8344",
-      "9523cee3-7413-4d47-afdd-df9fd8e9ad49"
-    ],
-    "authors": [
-      "a7b8c9d0-e1f2-4a3b-4c5d-6e7f8a9b0c1d"
-    ],
-    "students": [
-      "88b8c9d0-e1f2-4a3b-4c5d-6e7f8a9b0c1d",
-      "22b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d",
-      "00d0e1f2-a3b4-4c5d-6e7f-8a9b0c1d2e3f",
-      "99c9d0e1-f2a3-4b4c-5d6e-7f8a9b0c1d2e"
-    ],
-    "topics": [
-      "94c797dd-92be-4ba6-9b5b-14809b6792ec",
-      "ab9201f4-4a49-4b07-a5f6-41d66c058bdf"
-    ]
+  {
+    "model": "edu.course",
+    "pk": "485316c0-b1e5-4c63-ac9d-a2f676b7b72d",
+    "fields": {
+      "updated_at": "2025-10-22T12:01:57.201Z",
+      "created_at": "2025-10-22T12:01:57.201Z",
+      "slug": "программирование-на-python-отборный-материал",
+      "title": "Программирование на Python [Отборный материал]",
+      "overview": "Курс содержит полезный материал из основ языка. Также рассматриваются интересные библиотеки и технологии",
+      "description": "<p><strong>О курсе</strong><br><span style=\"color:oklch(0.29740.0362281.74);\">Курс содержит 3 модуля,&nbsp;в которых мы рассматриваем интересные технологии из основ языка,</span><br><span style=\"color:oklch(0.29740.0362281.74);\">после чего закрепляем всё на практике. 2-й модуль содержит практические примеры, также в этом</span><br><span style=\"color:oklch(0.29740.0362281.74);\">модуле рассматривается библиотека RICH, которая позволяет реализовать интерфейс в терминале.</span><br><span style=\"color:oklch(0.29740.0362281.74);\">В&nbsp;конце курса мы рассмотрим полезные книги, которые стоит изучить в дальнейшем.</span><br><br><strong>Что мы изучим?</strong><br><span style=\"color:oklch(0.29740.0362281.74);\">1. PyCharm - Настройка для удобной работы и преимущества над другими IDE</span><br><span style=\"color:oklch(0.29740.0362281.74);\">2. Работа с файлами Python в оперативной памяти. IO Python - Собираем файлы в ОЗУ</span><br><span style=\"color:oklch(0.29740.0362281.74);\">3. Создание собственных ботов - Pyautogui Python</span><br><span style=\"color:oklch(0.29740.0362281.74);\">4. Шифрование файлов PYTHON в ОПЕРАТИВНОЙ памяти | PyAesCrypt + IO</span><br><span style=\"color:oklch(0.29740.0362281.74);\">5. KeyBind Python - Вызываем функции через ГОРЯЧИЕ КЛАВИШИ</span><br><span style=\"color:oklch(0.29740.0362281.74);\">6. Lambda Python на русском за 5 минут | Лямбда выражения Python</span><br><span style=\"color:oklch(0.29740.0362281.74);\">7. Аннотации Python - Упрощаем работу с кодом</span><br><span style=\"color:oklch(0.29740.0362281.74);\">8. Декораторы Python на простых примерах</span><br><span style=\"color:oklch(0.29740.0362281.74);\">9. Замыкания в Python | Closure Python</span><br><span style=\"color:oklch(0.29740.0362281.74);\">10. Как найти ошибку в коде | Работа с отладчиком</span><br><span style=\"color:oklch(0.29740.0362281.74);\">11. Защитите свой код на Python от взлома - PYARMOR Обфускация</span><br><span style=\"color:oklch(0.29740.0362281.74);\">12. Как управлять мышью и клавиатурой Python (pynput). Все основы в одном видео</span><br><span style=\"color:oklch(0.29740.0362281.74);\">13. Кэширование PYTHON - Работа с LRU_CACHE для оптимизации программы</span><br><span style=\"color:oklch(0.29740.0362281.74);\">14. Переменные окружения Linux | Как безопасно хранить данные для проекта</span><br><span style=\"color:oklch(0.29740.0362281.74);\">15. Работа с Stub файлами Python. Для чего нужны и как использовать?!</span><br><span style=\"color:oklch(0.29740.0362281.74);\">16. RICH - Интерфейс в терминале PYTHON - Разметка, Стили, Панели</span><br><span style=\"color:oklch(0.29740.0362281.74);\">17. RICH - Интерфейс в терминале PYTHON - Таблицы, Прогресс бары, Блоки</span><br><span style=\"color:oklch(0.29740.0362281.74);\">18. SQLITE Python - Создаем форму для регистрации на PYQT5 и SQLITE3</span><br><span style=\"color:oklch(0.29740.0362281.74);\">19. Реверсинг Python программы, почему Python не безопасен</span><br><span style=\"color:oklch(0.29740.0362281.74);\">20. PYTHON книги которые сделают из тебя профессионала - лучшие книги PYTHON</span><br><span style=\"color:oklch(0.29740.0362281.74);\">21. ТОП 3 книги для PYTHON Профи | Книги PYTHON для опытных разработчиков</span><br><br><strong>Кому подойдет?</strong><br><span style=\"color:oklch(0.29740.0362281.74);\">Любым Python разработчикам, которые хотят узнать для себя что-то новое или же закрепить уже изученный</span><br><span style=\"color:oklch(0.29740.0362281.74);\">ранее материал. Данный курс содержит много интересных примеров,&nbsp;поэтому каждый сможет узнать для</span><br><span style=\"color:oklch(0.29740.0362281.74);\">себя что-то новое и получить неплохой результат.</span></p>",
+      "requirements": [],
+      "target_audience": [],
+      "preview_img": "course/course/%Y/%m/%d/introduction.png",
+      "preview_video": "course/course/%Y/%m/%d/Шаг_1_-_Что_такое_Django._Инструментальные_средства.mp4",
+      "duration": "2.0",
+      "category": "a1a1a1a1-1111-4aaa-aaaa-111111111111",
+      "language": "9523cee3-7413-4d47-afdd-df9fd8e9ad49",
+      "level": "all_levels",
+      "what_you_will_learn": [
+        "Работа с файлами Python в оперативной памяти используя IO Python",
+        "Создание собственных ботов с помощью библиотеки Pyautogui Python",
+        "Шифрование файлов Python в оперативной памяти с использованием PyAesCrypt и IO",
+        "Вызов функций через горячие клавиши с KeyBind Python",
+        "Использование лямбда-выражений в Python за 5 минут",
+        "Применение аннотаций Python для упрощения работы с кодом",
+        "Создание и использование декораторов Python на простых примерах",
+        "Работа с замыканиями в Python (Closure Python)",
+        "Поиск ошибок в коде и работа с отладчиком",
+        "Защита Python кода от взлома с помощью обфускации PYARMOR",
+        "Управление мышью и клавиатурой с помощью Python (pynput)",
+        "Кэширование в Python для оптимизации программы с LRU_CACHE",
+        "Работа с переменными окружения Linux для безопасного хранения данных проекта",
+        "Использование Stub файлов Python и их назначение",
+        "Основы реверсинга Python программ и вопросы безопасности",
+        "Создание Discord бота с автопостингом контента на Python",
+        "Обзор профессиональных Python книг для развития навыков",
+        "Создание интерфейсов в терминале с помощью библиотеки RICH",
+        "Работа с SQLite Python и создание форм регистрации на PYQT5 и SQLITE3",
+        "Создание Telegram бота с админкой и интерфейсом для управления ботами",
+        "Разработка Telegram бота с автопостингом в каналы",
+        "Подбор пароля к Excel документу на Python с использованием PyQt5",
+        "ТОП 3 книги для профессиональных Python разработчиков"
+      ],
+      "is_free": true,
+      "price": "0.00",
+      "is_published": false,
+      "subtitles": [
+        "662ac5c1-8acb-40d9-a161-b4fa23ef8344",
+        "9523cee3-7413-4d47-afdd-df9fd8e9ad49"
+      ],
+      "authors": [
+        "a7b8c9d0-e1f2-4a3b-4c5d-6e7f8a9b0c1d"
+      ],
+      "students": [
+        "88b8c9d0-e1f2-4a3b-4c5d-6e7f8a9b0c1d",
+        "22b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d",
+        "00d0e1f2-a3b4-4c5d-6e7f-8a9b0c1d2e3f",
+        "99c9d0e1-f2a3-4b4c-5d6e-7f8a9b0c1d2e"
+      ],
+      "topics": [
+        "94c797dd-92be-4ba6-9b5b-14809b6792ec",
+        "ab9201f4-4a49-4b07-a5f6-41d66c058bdf"
+      ]
+    }
+  },
+  {
+    "model": "edu.course",
+    "pk": "4e95a714-b5a2-49a5-9ae9-25d24ee394f0",
+    "fields": {
+      "updated_at": "2025-10-22T12:48:33.473Z",
+      "created_at": "2025-10-22T12:48:33.473Z",
+      "slug": "полный-курс-по-react-js-redux-router-tailwind-css",
+      "title": "Полный курс по React JS (Redux / Router / Tailwind CSS)",
+      "overview": "Ультимативный курс по React JS + Полное изучение библиотек экосистемы React ( Redux / Router ) & Tailwind CSS",
+      "description": "<p style=\"margin-left:0px;\"><strong>Добро пожаловать!</strong></p><p style=\"margin-left:0px;\">Я рад приветствовать вас на полном курсе по самой популярной и востребованной библиотеке для FrontEnd веб-разработки — <strong>React JS</strong>.</p><p style=\"margin-left:0px;\">&nbsp;</p><p style=\"margin-left:0px;\"><strong>Внутри курса вас ждет:</strong></p><p style=\"margin-left:0px;\">• Весь <strong>нативный</strong> React — от самых простых вещей до продвинутых концепций, шаг за шагом вместе с преподавателем.</p><p style=\"margin-left:0px;\">• Полное изучение ключевых библиотек экосистемы React — <strong>React Redux</strong> и <strong>React Router</strong>, включая актуальный синтаксис и современные стандарты разработки.</p><p style=\"margin-left:0px;\">• Более <strong>200 видеоуроков</strong>, раскрывающих все нюансы создания веб-приложений на React.</p><p style=\"margin-left:0px;\">• Более <strong>13 практических заданий</strong> на самостоятельное выполнение по каждой теме курса.</p><p style=\"margin-left:0px;\">• Более <strong>100 тестов</strong> на самопроверку, которые помогут лучше усвоить материал.</p><p style=\"margin-left:0px;\">• Авторское интерактивное пособие — <strong>учебник на более чем 270 страниц</strong>.</p><p style=\"margin-left:0px;\">• Бонусный модуль по разработке с использованием <strong>нейросетей</strong>.</p><p style=\"margin-left:0px;\">• Поддержка преподавателя и <strong>ежедневные ответы</strong> на все вопросы.<br><br><br><strong>Полное понимание React JS / React Redux / React Router</strong></p><p style=\"margin-left:0px;\">В этом курсе мы разберемся, как <strong>React работает под капотом</strong>, чтобы вы понимали его <strong>логику и философию</strong>, а не просто запоминали методы и функции.</p><p style=\"margin-left:0px;\">&nbsp;</p><p style=\"margin-left:0px;\"><strong>Современный курс по React JS</strong></p><p style=\"margin-left:0px;\">В отличие от многих курсов, основанных на устаревших версиях React, этот курс познакомит вас с <strong>самыми современными стандартами разработки</strong>, <strong>новым синтаксисом</strong>, включая <strong>React 19 (5 декабря 2024 года)</strong>, и последними обновлениями библиотек <strong>React Redux</strong> и <strong>React Router</strong>, в том числе <strong>Redux Toolkit</strong> и <strong>React Router 6.4+</strong>.</p><p style=\"margin-left:0px;\">&nbsp;</p><p style=\"margin-left:0px;\"><strong>Бесплатный учебник — пособие к курсу</strong></p><p style=\"margin-left:0px;\">Вам в помощь я разработал <strong>подробное интерактивное пособие</strong> на более чем <strong>270 страниц</strong>, где собраны <strong>все методы и приемы React JS</strong> и его экосистемных библиотек.</p><p style=\"margin-left:0px;\">Это пособие — <strong>моя отдельная гордость</strong>. В нем <strong>сотни примеров</strong>, объясняющих все нюансы работы <strong>React</strong> и <strong>его библиотек</strong> на понятных и доступных примерах.<br>&nbsp;</p><p style=\"margin-left:0px;\"><br><strong>Полный курс по Tailwind CSS</strong></p><p style=\"margin-left:0px;\">Дополнительно, <strong>в качестве бонуса</strong>, мы изучим <strong>самый современный и востребованный фреймворк</strong> для стилизации веб-приложений — <strong>Tailwind CSS</strong>, который позволит реализовывать <strong>любые дизайнерские решения</strong> ваших проектов.<br>&nbsp;</p><p style=\"margin-left:0px;\"><br><strong>Практика, практика и только практика</strong></p><p style=\"margin-left:0px;\">Курс <strong>полностью основан на практике</strong>. Все темы курса изучаются в процессе разработки <strong>множества различных проектов</strong> — от <strong>табов, переключателей и модальных окон</strong> до <strong>планировщиков задач, калькуляторов валют и даже интернет-магазина</strong>.<br>&nbsp;</p><p style=\"margin-left:0px;\"><br><strong>Блок по необходимым темам JavaScript включен в курс</strong></p><p style=\"margin-left:0px;\">Для прохождения курса <strong>необходимы базовые знания HTML, CSS и JavaScript</strong>.</p><p style=\"margin-left:0px;\">Если вы сомневаетесь в своих знаниях, внутри курса есть <strong>отдельный модуль</strong> по повторению <strong>всего необходимого</strong> из <strong>нативного JavaScript</strong>.<br>&nbsp;</p><p style=\"margin-left:0px;\"><br><strong>Ответы на вопросы от автора каждый день</strong></p><p style=\"margin-left:0px;\">И конечно, если у вас возникнут вопросы, вы <strong>всегда</strong> сможете задать их мне. Я <strong>отвечаю всем студентам каждый день, без выходных</strong>.</p><p style=\"margin-left:0px;\">Все практические задания сопровождаются <strong>ответами и пояснениями</strong>.<br>&nbsp;</p><p style=\"margin-left:0px;\"><br><strong>Блок по нейросетям в подарок</strong></p><p style=\"margin-left:0px;\">Мы разберем <strong>современные методы разработки</strong>, включая <strong>разработку с помощью нейросетей</strong>.<br>&nbsp;</p><p style=\"margin-left:0px;\"><br><strong>Итак, что такое школа Foundation?</strong></p><p style=\"margin-left:0px;\"><strong>Foundation</strong> — это <strong>уникальная методика преподавания</strong> от простого к сложному.</p><p style=\"margin-left:0px;\">Нашу методику <strong>уже оценили тысячи студентов по всему миру</strong>. Средняя оценка курса <strong>от более чем 9000 студентов</strong> составляет <strong>4.82 из 5</strong>, что является <strong>одним из лучших результатов среди всех онлайн-курсов</strong>.</p><p style=\"margin-left:0px;\">&nbsp;</p><p style=\"margin-left:0px;\">Попробуйте <strong>современный формат обучения</strong> с <strong>Foundation</strong>, и вы <strong>не сможете учиться по-другому</strong>.</p><p style=\"margin-left:0px;\">&nbsp;</p><p style=\"margin-left:0px;\"><strong>До встречи на уроках!</strong></p>",
+      "requirements": [
+        "Для курса необходимы базовые знания JavaScript / HTML / CSS"
+      ],
+      "target_audience": [
+        "Для Front End Web разработчиков",
+        "Для Веб разработчиков"
+      ],
+      "preview_img": "",
+      "preview_video": "",
+      "duration": null,
+      "category": "a1a1a1a1-1111-4aaa-aaaa-111111111111",
+      "language": "9523cee3-7413-4d47-afdd-df9fd8e9ad49",
+      "level": "beginner",
+      "what_you_will_learn": [
+        "Изучите все аспекты библиотеки React JS",
+        "Изучите библиотеку для управления маршрутами — React Router",
+        "Изучите библиотеку для управления состояниями — React Redux",
+        "Освойте современный синтаксис Redux Toolkit",
+        "Освойте современный синтаксис React Router 6.4+",
+        "Узнайте о последних обновлениях библиотеки React и современных методах разработки",
+        "Научитесь создавать веб-приложения любой сложности",
+        "Изучите фреймворк для стилизации веб-приложений — Tailwind CSS"
+      ],
+      "is_free": false,
+      "price": "9.99",
+      "is_published": false,
+      "subtitles": [
+        "662ac5c1-8acb-40d9-a161-b4fa23ef8344"
+      ],
+      "authors": [
+        "a7b8c9d0-e1f2-4a3b-4c5d-6e7f8a9b0c1d"
+      ],
+      "students": [],
+      "topics": [
+        "5ea34e9a-a547-43e8-88dc-3ae92ed2afe7",
+        "e380c6b4-1fef-4e76-9932-f31fb390d3ce",
+        "f45cbcf9-5171-4bc9-9a8a-631804e37c86"
+      ]
+    }
+  },
+  {
+    "model": "edu.course",
+    "pk": "6f8e08ef-7a68-45c1-b398-00e5551a43ea",
+    "fields": {
+      "updated_at": "2025-10-22T12:24:15.223Z",
+      "created_at": "2025-10-22T12:24:15.223Z",
+      "slug": "kubernetes-полный-курс-по-kubernetes",
+      "title": "Kubernetes - Полный Курс по Kubernetes",
+      "overview": "Изучите Kubernetes и составляющие части кластера - поды, узлы, сервисы и деплойменты, создание и применение YAML файлов",
+      "description": "<p style=\"margin-left:0px;\">Добро пожаловать в курс по <strong>Kubernetes</strong>. В этом курсе вы получите глубокое <strong>понимание</strong> и <strong>практический опыт</strong> работы с Kubernetes. <strong>Kubernetes</strong> сейчас является де-факто стандартом для развертывания контейнеризированных приложений в <strong>production среде</strong> и является обязательным инструментом для всех <strong>DevOps</strong>-инженеров и разработчиков программного обеспечения, которые хотят научиться запускать&nbsp; свои приложения в production.</p><p style=\"margin-left:0px;\"><strong>В этом практическом курсе Kubernetes вы узнаете о ключевых составляющих частях Kubernetes:</strong></p><ul><li><p style=\"margin-left:0px;\">Узлы</p></li><li><p style=\"margin-left:0px;\">Поды</p></li><li><p style=\"margin-left:0px;\">Контейнеры</p></li><li><p style=\"margin-left:0px;\">Деплойменты</p></li><li><p style=\"margin-left:0px;\">Сервисы</p></li></ul><p style=\"margin-left:0px;\">В ходе этого курса вы также выполните следующие <strong>практические задания</strong>:</p><ul><li><p style=\"margin-left:0px;\">Создание кластера Kubernetes локально на своих компьютерах с помощью <strong>Minikube</strong>.</p></li><li><p style=\"margin-left:0px;\">Управление кластером Kubernetes с помощью <strong>kubectl</strong></p></li><li><p style=\"margin-left:0px;\">Создание <strong>подов</strong>, анализ того, как они запускаются на конкретных узлах и исследование их внутренней структуры</p></li><li><p style=\"margin-left:0px;\">Создание <strong>деплойментов</strong> и анализ того, как Kubernetes автоматически создает необходимые поды для деплойментов</p></li><li><p style=\"margin-left:0px;\">Масштабирование деплойментов путём увеличения или уменьшения количества реплик и наблюдение за процессом изменения количества подов</p></li><li><p style=\"margin-left:0px;\">Создание <strong>служб</strong> для возможность подключения к развертываниям как внутри кластера Kubernetes, так и снаружи</p></li><li><p style=\"margin-left:0px;\">Запуск<strong> панели управления</strong> Kubernetes</p><p style=\"margin-left:0px;\">&nbsp;</p></li></ul><p style=\"margin-left:0px;\">Также на практике вы научитесь развертывать приложения в Kubernetes, следуя <strong>декларативному</strong> подходу:</p><ul><li><p style=\"margin-left:0px;\">Создание и применение<strong> конфигурационных файлов YAML</strong> для <strong>деплойментов</strong></p></li><li><p style=\"margin-left:0px;\">Создание и применение<strong> </strong>конфигурационных файлов <strong>YAML</strong> для <strong>сервисов</strong>.</p></li><li><p style=\"margin-left:0px;\">Изменение деплойментов и служб путём внесения изменений в файлы конфигурации YAML и повторное применение их</p></li></ul><p style=\"margin-left:0px;\">Вы также научитесь выполнять следующие задачи:</p><ul><li><p style=\"margin-left:0px;\">Создание кастомных образов Docker и развертывание деплойментов с использованием этих образов</p></li><li><p style=\"margin-left:0px;\">Выполнение обновления приложений в деплойментах</p></li><li><p style=\"margin-left:0px;\">Изменение среды создания и запуска контейнеров с <strong>Docker</strong> на <strong>containerd</strong> и повторное развертывание&nbsp; ранее созданных приложений</p></li></ul><p style=\"margin-left:0px;\">Кроме этого вы научитесь создавать кластер Kubernetes в production, используя один из платных провайдеров Kubernetes и разворачивать в нём приложения.</p><p style=\"margin-left:0px;\">Благодаря этому курсу вы получите пожизненный доступ более чем к <strong>70 лекциям</strong> и <strong>десяткам практических упражнений</strong>.</p><p style=\"margin-left:0px;\">После курса вы получите солидный практический опыт работы с Kubernetes и сможете развернуть любое приложение в <strong>production</strong> с помощью Kubernetes.</p><p style=\"margin-left:0px;\">Вы также получите <strong>30-дневную гарантию возврата денег.</strong></p><p style=\"margin-left:0px;\">Очень надеюсь увидеть вас на курсе!</p>",
+      "requirements": [],
+      "target_audience": [],
+      "preview_img": "course/course/%Y/%m/%d/maxresdefault.jpg",
+      "preview_video": "course/course/%Y/%m/%d/Шаг_1_-_Установка_Django._Создание_проекта.mp4.mp4",
+      "duration": "6.0",
+      "category": "a1a1a1a1-1111-4aaa-aaaa-111111111111",
+      "language": "9523cee3-7413-4d47-afdd-df9fd8e9ad49",
+      "level": "intermediate",
+      "what_you_will_learn": [
+        "Поймёте архитектуру Kubernetes, включая узлы, поды, сервисы и деплойменты, а также то, как управлять сервисами, узлами, подами и деплойментами.",
+        "Создание кластера Kubernetes, управление им с помощью Kubernetes Dashboard, создание подов, деплойментов и сервисов, используя kubectl",
+        "Создадите различные виды сервисов, таких как ClusterIP, NodePort и LoadBalancer, и, конечно же, поймете, как работает внутренний DNS",
+        "Создание служб и деплойментов с помощью конфигурационных файлов YAML, которые позволяют быстро и легко применять и обновлять конфигурации"
+      ],
+      "is_free": false,
+      "price": "9.99",
+      "is_published": false,
+      "subtitles": [
+        "662ac5c1-8acb-40d9-a161-b4fa23ef8344",
+        "9523cee3-7413-4d47-afdd-df9fd8e9ad49",
+        "f3d30a5a-e742-4b64-b0aa-625ce58101d2",
+        "09759d8a-442c-41f3-8c22-a2438f90a1a0"
+      ],
+      "authors": [
+        "d0e1f2a3-b4c5-4d6e-7f8a-9b0c1d2e3f4a"
+      ],
+      "students": [
+        "55e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f8a",
+        "22b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d"
+      ],
+      "topics": [
+        "e25444eb-acc8-4f64-b684-c3a1190546ab",
+        "78c785f8-d000-4d4b-bba2-11ca5065cd06"
+      ]
+    }
+  },
+  {
+    "model": "edu.course",
+    "pk": "c5acf88c-766d-4343-b5ce-3e82d372c42f",
+    "fields": {
+      "updated_at": "2025-10-22T12:44:31.417Z",
+      "created_at": "2025-10-22T12:44:31.417Z",
+      "slug": "kubernetes-полный-курс-по-kubernetes-2",
+      "title": "Kubernetes - Полный Курс по Kubernetes 2",
+      "overview": "Изучите Kubernetes и составляющие части кластера - поды, узлы, сервисы и деплойменты, создание и применение YAML файлов",
+      "description": "<p style=\"margin-left:0px;\">Добро пожаловать в курс по <strong>Kubernetes</strong>. В этом курсе вы получите глубокое <strong>понимание</strong> и <strong>практический опыт</strong> работы с Kubernetes. <strong>Kubernetes</strong> сейчас является де-факто стандартом для развертывания контейнеризированных приложений в <strong>production среде</strong> и является обязательным инструментом для всех <strong>DevOps</strong>-инженеров и разработчиков программного обеспечения, которые хотят научиться запускать&nbsp; свои приложения в production.</p><p style=\"margin-left:0px;\"><strong>В этом практическом курсе Kubernetes вы узнаете о ключевых составляющих частях Kubernetes:</strong></p><ul><li><p style=\"margin-left:0px;\">Узлы</p></li><li><p style=\"margin-left:0px;\">Поды</p></li><li><p style=\"margin-left:0px;\">Контейнеры</p></li><li><p style=\"margin-left:0px;\">Деплойменты</p></li><li><p style=\"margin-left:0px;\">Сервисы</p></li></ul><p style=\"margin-left:0px;\">В ходе этого курса вы также выполните следующие <strong>практические задания</strong>:</p><ul><li><p style=\"margin-left:0px;\">Создание кластера Kubernetes локально на своих компьютерах с помощью <strong>Minikube</strong>.</p></li><li><p style=\"margin-left:0px;\">Управление кластером Kubernetes с помощью <strong>kubectl</strong></p></li><li><p style=\"margin-left:0px;\">Создание <strong>подов</strong>, анализ того, как они запускаются на конкретных узлах и исследование их внутренней структуры</p></li><li><p style=\"margin-left:0px;\">Создание <strong>деплойментов</strong> и анализ того, как Kubernetes автоматически создает необходимые поды для деплойментов</p></li><li><p style=\"margin-left:0px;\">Масштабирование деплойментов путём увеличения или уменьшения количества реплик и наблюдение за процессом изменения количества подов</p></li><li><p style=\"margin-left:0px;\">Создание <strong>служб</strong> для возможность подключения к развертываниям как внутри кластера Kubernetes, так и снаружи</p></li><li><p style=\"margin-left:0px;\">Запуск<strong> панели управления</strong> Kubernetes</p><p style=\"margin-left:0px;\">&nbsp;</p></li></ul><p style=\"margin-left:0px;\">Также на практике вы научитесь развертывать приложения в Kubernetes, следуя <strong>декларативному</strong> подходу:</p><ul><li><p style=\"margin-left:0px;\">Создание и применение<strong> конфигурационных файлов YAML</strong> для <strong>деплойментов</strong></p></li><li><p style=\"margin-left:0px;\">Создание и применение<strong> </strong>конфигурационных файлов <strong>YAML</strong> для <strong>сервисов</strong>.</p></li><li><p style=\"margin-left:0px;\">Изменение деплойментов и служб путём внесения изменений в файлы конфигурации YAML и повторное применение их</p></li></ul><p style=\"margin-left:0px;\">Вы также научитесь выполнять следующие задачи:</p><ul><li><p style=\"margin-left:0px;\">Создание кастомных образов Docker и развертывание деплойментов с использованием этих образов</p></li><li><p style=\"margin-left:0px;\">Выполнение обновления приложений в деплойментах</p></li><li><p style=\"margin-left:0px;\">Изменение среды создания и запуска контейнеров с <strong>Docker</strong> на <strong>containerd</strong> и повторное развертывание&nbsp; ранее созданных приложений</p></li></ul><p style=\"margin-left:0px;\">Кроме этого вы научитесь создавать кластер Kubernetes в production, используя один из платных провайдеров Kubernetes и разворачивать в нём приложения.</p><p style=\"margin-left:0px;\">Благодаря этому курсу вы получите пожизненный доступ более чем к <strong>70 лекциям</strong> и <strong>десяткам практических упражнений</strong>.</p><p style=\"margin-left:0px;\">После курса вы получите солидный практический опыт работы с Kubernetes и сможете развернуть любое приложение в <strong>production</strong> с помощью Kubernetes.</p><p style=\"margin-left:0px;\">Вы также получите <strong>30-дневную гарантию возврата денег.</strong></p><p style=\"margin-left:0px;\">Очень надеюсь увидеть вас на курсе!</p>",
+      "requirements": [
+        "Базовые знания Docker",
+        "Компьютер MacOS или Windows и желание учиться"
+      ],
+      "target_audience": [
+        "Инженеры DevOps, которые хотят научиться использовать Kubernetes",
+        "Разработчики программного обеспечения, которые хотят узнать, как запускть приложения в кластере Kubernetes"
+      ],
+      "preview_img": "",
+      "preview_video": "",
+      "duration": null,
+      "category": "a1a1a1a1-1111-4aaa-aaaa-111111111111",
+      "language": "9523cee3-7413-4d47-afdd-df9fd8e9ad49",
+      "level": "beginner",
+      "what_you_will_learn": [
+        "Поймёте архитектуру Kubernetes, включая узлы, поды, сервисы и деплойменты, а также то, как управлять сервисами, узлами, подами и деплойментами.",
+        "Создание кластера Kubernetes, управление им с помощью Kubernetes Dashboard, создание подов, деплойментов и сервисов, используя kubectl",
+        "Создадите различные виды сервисов, таких как ClusterIP, NodePort и LoadBalancer, и, конечно же, поймете, как работает внутренний DNS",
+        "Создание служб и деплойментов с помощью конфигурационных файлов YAML, которые позволяют быстро и легко применять и обновлять конфигурации"
+      ],
+      "is_free": false,
+      "price": "9.99",
+      "is_published": false,
+      "subtitles": [
+        "662ac5c1-8acb-40d9-a161-b4fa23ef8344",
+        "9523cee3-7413-4d47-afdd-df9fd8e9ad49"
+      ],
+      "authors": [
+        "d0e1f2a3-b4c5-4d6e-7f8a-9b0c1d2e3f4a"
+      ],
+      "students": [],
+      "topics": [
+        "78c785f8-d000-4d4b-bba2-11ca5065cd06",
+        "dba64c85-8d1d-4d16-85ee-9355cc9bde09"
+      ]
+    }
   }
-},
-{
-  "model": "edu.course",
-  "pk": "4e95a714-b5a2-49a5-9ae9-25d24ee394f0",
-  "fields": {
-    "updated_at": "2025-10-22T12:48:33.473Z",
-    "created_at": "2025-10-22T12:48:33.473Z",
-    "slug": "полный-курс-по-react-js-redux-router-tailwind-css",
-    "title": "Полный курс по React JS (Redux / Router / Tailwind CSS)",
-    "overview": "Ультимативный курс по React JS + Полное изучение библиотек экосистемы React ( Redux / Router ) & Tailwind CSS",
-    "description": "<p style=\"margin-left:0px;\"><strong>Добро пожаловать!</strong></p><p style=\"margin-left:0px;\">Я рад приветствовать вас на полном курсе по самой популярной и востребованной библиотеке для FrontEnd веб-разработки — <strong>React JS</strong>.</p><p style=\"margin-left:0px;\">&nbsp;</p><p style=\"margin-left:0px;\"><strong>Внутри курса вас ждет:</strong></p><p style=\"margin-left:0px;\">• Весь <strong>нативный</strong> React — от самых простых вещей до продвинутых концепций, шаг за шагом вместе с преподавателем.</p><p style=\"margin-left:0px;\">• Полное изучение ключевых библиотек экосистемы React — <strong>React Redux</strong> и <strong>React Router</strong>, включая актуальный синтаксис и современные стандарты разработки.</p><p style=\"margin-left:0px;\">• Более <strong>200 видеоуроков</strong>, раскрывающих все нюансы создания веб-приложений на React.</p><p style=\"margin-left:0px;\">• Более <strong>13 практических заданий</strong> на самостоятельное выполнение по каждой теме курса.</p><p style=\"margin-left:0px;\">• Более <strong>100 тестов</strong> на самопроверку, которые помогут лучше усвоить материал.</p><p style=\"margin-left:0px;\">• Авторское интерактивное пособие — <strong>учебник на более чем 270 страниц</strong>.</p><p style=\"margin-left:0px;\">• Бонусный модуль по разработке с использованием <strong>нейросетей</strong>.</p><p style=\"margin-left:0px;\">• Поддержка преподавателя и <strong>ежедневные ответы</strong> на все вопросы.<br><br><br><strong>Полное понимание React JS / React Redux / React Router</strong></p><p style=\"margin-left:0px;\">В этом курсе мы разберемся, как <strong>React работает под капотом</strong>, чтобы вы понимали его <strong>логику и философию</strong>, а не просто запоминали методы и функции.</p><p style=\"margin-left:0px;\">&nbsp;</p><p style=\"margin-left:0px;\"><strong>Современный курс по React JS</strong></p><p style=\"margin-left:0px;\">В отличие от многих курсов, основанных на устаревших версиях React, этот курс познакомит вас с <strong>самыми современными стандартами разработки</strong>, <strong>новым синтаксисом</strong>, включая <strong>React 19 (5 декабря 2024 года)</strong>, и последними обновлениями библиотек <strong>React Redux</strong> и <strong>React Router</strong>, в том числе <strong>Redux Toolkit</strong> и <strong>React Router 6.4+</strong>.</p><p style=\"margin-left:0px;\">&nbsp;</p><p style=\"margin-left:0px;\"><strong>Бесплатный учебник — пособие к курсу</strong></p><p style=\"margin-left:0px;\">Вам в помощь я разработал <strong>подробное интерактивное пособие</strong> на более чем <strong>270 страниц</strong>, где собраны <strong>все методы и приемы React JS</strong> и его экосистемных библиотек.</p><p style=\"margin-left:0px;\">Это пособие — <strong>моя отдельная гордость</strong>. В нем <strong>сотни примеров</strong>, объясняющих все нюансы работы <strong>React</strong> и <strong>его библиотек</strong> на понятных и доступных примерах.<br>&nbsp;</p><p style=\"margin-left:0px;\"><br><strong>Полный курс по Tailwind CSS</strong></p><p style=\"margin-left:0px;\">Дополнительно, <strong>в качестве бонуса</strong>, мы изучим <strong>самый современный и востребованный фреймворк</strong> для стилизации веб-приложений — <strong>Tailwind CSS</strong>, который позволит реализовывать <strong>любые дизайнерские решения</strong> ваших проектов.<br>&nbsp;</p><p style=\"margin-left:0px;\"><br><strong>Практика, практика и только практика</strong></p><p style=\"margin-left:0px;\">Курс <strong>полностью основан на практике</strong>. Все темы курса изучаются в процессе разработки <strong>множества различных проектов</strong> — от <strong>табов, переключателей и модальных окон</strong> до <strong>планировщиков задач, калькуляторов валют и даже интернет-магазина</strong>.<br>&nbsp;</p><p style=\"margin-left:0px;\"><br><strong>Блок по необходимым темам JavaScript включен в курс</strong></p><p style=\"margin-left:0px;\">Для прохождения курса <strong>необходимы базовые знания HTML, CSS и JavaScript</strong>.</p><p style=\"margin-left:0px;\">Если вы сомневаетесь в своих знаниях, внутри курса есть <strong>отдельный модуль</strong> по повторению <strong>всего необходимого</strong> из <strong>нативного JavaScript</strong>.<br>&nbsp;</p><p style=\"margin-left:0px;\"><br><strong>Ответы на вопросы от автора каждый день</strong></p><p style=\"margin-left:0px;\">И конечно, если у вас возникнут вопросы, вы <strong>всегда</strong> сможете задать их мне. Я <strong>отвечаю всем студентам каждый день, без выходных</strong>.</p><p style=\"margin-left:0px;\">Все практические задания сопровождаются <strong>ответами и пояснениями</strong>.<br>&nbsp;</p><p style=\"margin-left:0px;\"><br><strong>Блок по нейросетям в подарок</strong></p><p style=\"margin-left:0px;\">Мы разберем <strong>современные методы разработки</strong>, включая <strong>разработку с помощью нейросетей</strong>.<br>&nbsp;</p><p style=\"margin-left:0px;\"><br><strong>Итак, что такое школа Foundation?</strong></p><p style=\"margin-left:0px;\"><strong>Foundation</strong> — это <strong>уникальная методика преподавания</strong> от простого к сложному.</p><p style=\"margin-left:0px;\">Нашу методику <strong>уже оценили тысячи студентов по всему миру</strong>. Средняя оценка курса <strong>от более чем 9000 студентов</strong> составляет <strong>4.82 из 5</strong>, что является <strong>одним из лучших результатов среди всех онлайн-курсов</strong>.</p><p style=\"margin-left:0px;\">&nbsp;</p><p style=\"margin-left:0px;\">Попробуйте <strong>современный формат обучения</strong> с <strong>Foundation</strong>, и вы <strong>не сможете учиться по-другому</strong>.</p><p style=\"margin-left:0px;\">&nbsp;</p><p style=\"margin-left:0px;\"><strong>До встречи на уроках!</strong></p>",
-    "requirements": [
-      "Для курса необходимы базовые знания JavaScript / HTML / CSS"
-    ],
-    "target_audience": [
-      "Для Front End Web разработчиков",
-      "Для Веб разработчиков"
-    ],
-    "preview_img": "",
-    "preview_video": "",
-    "duration": null,
-    "category": "a1a1a1a1-1111-4aaa-aaaa-111111111111",
-    "language": "9523cee3-7413-4d47-afdd-df9fd8e9ad49",
-    "level": "beginner",
-    "what_you_will_learn": [
-      "Изучите все аспекты библиотеки React JS",
-      "Изучите библиотеку для управления маршрутами — React Router",
-      "Изучите библиотеку для управления состояниями — React Redux",
-      "Освойте современный синтаксис Redux Toolkit",
-      "Освойте современный синтаксис React Router 6.4+",
-      "Узнайте о последних обновлениях библиотеки React и современных методах разработки",
-      "Научитесь создавать веб-приложения любой сложности",
-      "Изучите фреймворк для стилизации веб-приложений — Tailwind CSS"
-    ],
-    "is_free": false,
-    "price": "9.99",
-    "is_published": false,
-    "subtitles": [
-      "662ac5c1-8acb-40d9-a161-b4fa23ef8344"
-    ],
-    "authors": [
-      "a7b8c9d0-e1f2-4a3b-4c5d-6e7f8a9b0c1d"
-    ],
-    "students": [],
-    "topics": [
-      "5ea34e9a-a547-43e8-88dc-3ae92ed2afe7",
-      "e380c6b4-1fef-4e76-9932-f31fb390d3ce",
-      "f45cbcf9-5171-4bc9-9a8a-631804e37c86"
-    ]
-  }
-},
-{
-  "model": "edu.course",
-  "pk": "6f8e08ef-7a68-45c1-b398-00e5551a43ea",
-  "fields": {
-    "updated_at": "2025-10-22T12:24:15.223Z",
-    "created_at": "2025-10-22T12:24:15.223Z",
-    "slug": "kubernetes-полный-курс-по-kubernetes",
-    "title": "Kubernetes - Полный Курс по Kubernetes",
-    "overview": "Изучите Kubernetes и составляющие части кластера - поды, узлы, сервисы и деплойменты, создание и применение YAML файлов",
-    "description": "<p style=\"margin-left:0px;\">Добро пожаловать в курс по <strong>Kubernetes</strong>. В этом курсе вы получите глубокое <strong>понимание</strong> и <strong>практический опыт</strong> работы с Kubernetes. <strong>Kubernetes</strong> сейчас является де-факто стандартом для развертывания контейнеризированных приложений в <strong>production среде</strong> и является обязательным инструментом для всех <strong>DevOps</strong>-инженеров и разработчиков программного обеспечения, которые хотят научиться запускать&nbsp; свои приложения в production.</p><p style=\"margin-left:0px;\"><strong>В этом практическом курсе Kubernetes вы узнаете о ключевых составляющих частях Kubernetes:</strong></p><ul><li><p style=\"margin-left:0px;\">Узлы</p></li><li><p style=\"margin-left:0px;\">Поды</p></li><li><p style=\"margin-left:0px;\">Контейнеры</p></li><li><p style=\"margin-left:0px;\">Деплойменты</p></li><li><p style=\"margin-left:0px;\">Сервисы</p></li></ul><p style=\"margin-left:0px;\">В ходе этого курса вы также выполните следующие <strong>практические задания</strong>:</p><ul><li><p style=\"margin-left:0px;\">Создание кластера Kubernetes локально на своих компьютерах с помощью <strong>Minikube</strong>.</p></li><li><p style=\"margin-left:0px;\">Управление кластером Kubernetes с помощью <strong>kubectl</strong></p></li><li><p style=\"margin-left:0px;\">Создание <strong>подов</strong>, анализ того, как они запускаются на конкретных узлах и исследование их внутренней структуры</p></li><li><p style=\"margin-left:0px;\">Создание <strong>деплойментов</strong> и анализ того, как Kubernetes автоматически создает необходимые поды для деплойментов</p></li><li><p style=\"margin-left:0px;\">Масштабирование деплойментов путём увеличения или уменьшения количества реплик и наблюдение за процессом изменения количества подов</p></li><li><p style=\"margin-left:0px;\">Создание <strong>служб</strong> для возможность подключения к развертываниям как внутри кластера Kubernetes, так и снаружи</p></li><li><p style=\"margin-left:0px;\">Запуск<strong> панели управления</strong> Kubernetes</p><p style=\"margin-left:0px;\">&nbsp;</p></li></ul><p style=\"margin-left:0px;\">Также на практике вы научитесь развертывать приложения в Kubernetes, следуя <strong>декларативному</strong> подходу:</p><ul><li><p style=\"margin-left:0px;\">Создание и применение<strong> конфигурационных файлов YAML</strong> для <strong>деплойментов</strong></p></li><li><p style=\"margin-left:0px;\">Создание и применение<strong> </strong>конфигурационных файлов <strong>YAML</strong> для <strong>сервисов</strong>.</p></li><li><p style=\"margin-left:0px;\">Изменение деплойментов и служб путём внесения изменений в файлы конфигурации YAML и повторное применение их</p></li></ul><p style=\"margin-left:0px;\">Вы также научитесь выполнять следующие задачи:</p><ul><li><p style=\"margin-left:0px;\">Создание кастомных образов Docker и развертывание деплойментов с использованием этих образов</p></li><li><p style=\"margin-left:0px;\">Выполнение обновления приложений в деплойментах</p></li><li><p style=\"margin-left:0px;\">Изменение среды создания и запуска контейнеров с <strong>Docker</strong> на <strong>containerd</strong> и повторное развертывание&nbsp; ранее созданных приложений</p></li></ul><p style=\"margin-left:0px;\">Кроме этого вы научитесь создавать кластер Kubernetes в production, используя один из платных провайдеров Kubernetes и разворачивать в нём приложения.</p><p style=\"margin-left:0px;\">Благодаря этому курсу вы получите пожизненный доступ более чем к <strong>70 лекциям</strong> и <strong>десяткам практических упражнений</strong>.</p><p style=\"margin-left:0px;\">После курса вы получите солидный практический опыт работы с Kubernetes и сможете развернуть любое приложение в <strong>production</strong> с помощью Kubernetes.</p><p style=\"margin-left:0px;\">Вы также получите <strong>30-дневную гарантию возврата денег.</strong></p><p style=\"margin-left:0px;\">Очень надеюсь увидеть вас на курсе!</p>",
-    "requirements": [],
-    "target_audience": [],
-    "preview_img": "course/course/%Y/%m/%d/maxresdefault.jpg",
-    "preview_video": "course/course/%Y/%m/%d/Шаг_1_-_Установка_Django._Создание_проекта.mp4.mp4",
-    "duration": "6.0",
-    "category": "a1a1a1a1-1111-4aaa-aaaa-111111111111",
-    "language": "9523cee3-7413-4d47-afdd-df9fd8e9ad49",
-    "level": "intermediate",
-    "what_you_will_learn": [
-      "Поймёте архитектуру Kubernetes, включая узлы, поды, сервисы и деплойменты, а также то, как управлять сервисами, узлами, подами и деплойментами.",
-      "Создание кластера Kubernetes, управление им с помощью Kubernetes Dashboard, создание подов, деплойментов и сервисов, используя kubectl",
-      "Создадите различные виды сервисов, таких как ClusterIP, NodePort и LoadBalancer, и, конечно же, поймете, как работает внутренний DNS",
-      "Создание служб и деплойментов с помощью конфигурационных файлов YAML, которые позволяют быстро и легко применять и обновлять конфигурации"
-    ],
-    "is_free": false,
-    "price": "9.99",
-    "is_published": false,
-    "subtitles": [
-      "662ac5c1-8acb-40d9-a161-b4fa23ef8344",
-      "9523cee3-7413-4d47-afdd-df9fd8e9ad49",
-      "f3d30a5a-e742-4b64-b0aa-625ce58101d2",
-      "09759d8a-442c-41f3-8c22-a2438f90a1a0"
-    ],
-    "authors": [
-      "d0e1f2a3-b4c5-4d6e-7f8a-9b0c1d2e3f4a"
-    ],
-    "students": [
-      "55e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f8a",
-      "22b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d"
-    ],
-    "topics": [
-      "e25444eb-acc8-4f64-b684-c3a1190546ab",
-      "78c785f8-d000-4d4b-bba2-11ca5065cd06"
-    ]
-  }
-},
-{
-  "model": "edu.course",
-  "pk": "c5acf88c-766d-4343-b5ce-3e82d372c42f",
-  "fields": {
-    "updated_at": "2025-10-22T12:44:31.417Z",
-    "created_at": "2025-10-22T12:44:31.417Z",
-    "slug": "kubernetes-полный-курс-по-kubernetes-2",
-    "title": "Kubernetes - Полный Курс по Kubernetes 2",
-    "overview": "Изучите Kubernetes и составляющие части кластера - поды, узлы, сервисы и деплойменты, создание и применение YAML файлов",
-    "description": "<p style=\"margin-left:0px;\">Добро пожаловать в курс по <strong>Kubernetes</strong>. В этом курсе вы получите глубокое <strong>понимание</strong> и <strong>практический опыт</strong> работы с Kubernetes. <strong>Kubernetes</strong> сейчас является де-факто стандартом для развертывания контейнеризированных приложений в <strong>production среде</strong> и является обязательным инструментом для всех <strong>DevOps</strong>-инженеров и разработчиков программного обеспечения, которые хотят научиться запускать&nbsp; свои приложения в production.</p><p style=\"margin-left:0px;\"><strong>В этом практическом курсе Kubernetes вы узнаете о ключевых составляющих частях Kubernetes:</strong></p><ul><li><p style=\"margin-left:0px;\">Узлы</p></li><li><p style=\"margin-left:0px;\">Поды</p></li><li><p style=\"margin-left:0px;\">Контейнеры</p></li><li><p style=\"margin-left:0px;\">Деплойменты</p></li><li><p style=\"margin-left:0px;\">Сервисы</p></li></ul><p style=\"margin-left:0px;\">В ходе этого курса вы также выполните следующие <strong>практические задания</strong>:</p><ul><li><p style=\"margin-left:0px;\">Создание кластера Kubernetes локально на своих компьютерах с помощью <strong>Minikube</strong>.</p></li><li><p style=\"margin-left:0px;\">Управление кластером Kubernetes с помощью <strong>kubectl</strong></p></li><li><p style=\"margin-left:0px;\">Создание <strong>подов</strong>, анализ того, как они запускаются на конкретных узлах и исследование их внутренней структуры</p></li><li><p style=\"margin-left:0px;\">Создание <strong>деплойментов</strong> и анализ того, как Kubernetes автоматически создает необходимые поды для деплойментов</p></li><li><p style=\"margin-left:0px;\">Масштабирование деплойментов путём увеличения или уменьшения количества реплик и наблюдение за процессом изменения количества подов</p></li><li><p style=\"margin-left:0px;\">Создание <strong>служб</strong> для возможность подключения к развертываниям как внутри кластера Kubernetes, так и снаружи</p></li><li><p style=\"margin-left:0px;\">Запуск<strong> панели управления</strong> Kubernetes</p><p style=\"margin-left:0px;\">&nbsp;</p></li></ul><p style=\"margin-left:0px;\">Также на практике вы научитесь развертывать приложения в Kubernetes, следуя <strong>декларативному</strong> подходу:</p><ul><li><p style=\"margin-left:0px;\">Создание и применение<strong> конфигурационных файлов YAML</strong> для <strong>деплойментов</strong></p></li><li><p style=\"margin-left:0px;\">Создание и применение<strong> </strong>конфигурационных файлов <strong>YAML</strong> для <strong>сервисов</strong>.</p></li><li><p style=\"margin-left:0px;\">Изменение деплойментов и служб путём внесения изменений в файлы конфигурации YAML и повторное применение их</p></li></ul><p style=\"margin-left:0px;\">Вы также научитесь выполнять следующие задачи:</p><ul><li><p style=\"margin-left:0px;\">Создание кастомных образов Docker и развертывание деплойментов с использованием этих образов</p></li><li><p style=\"margin-left:0px;\">Выполнение обновления приложений в деплойментах</p></li><li><p style=\"margin-left:0px;\">Изменение среды создания и запуска контейнеров с <strong>Docker</strong> на <strong>containerd</strong> и повторное развертывание&nbsp; ранее созданных приложений</p></li></ul><p style=\"margin-left:0px;\">Кроме этого вы научитесь создавать кластер Kubernetes в production, используя один из платных провайдеров Kubernetes и разворачивать в нём приложения.</p><p style=\"margin-left:0px;\">Благодаря этому курсу вы получите пожизненный доступ более чем к <strong>70 лекциям</strong> и <strong>десяткам практических упражнений</strong>.</p><p style=\"margin-left:0px;\">После курса вы получите солидный практический опыт работы с Kubernetes и сможете развернуть любое приложение в <strong>production</strong> с помощью Kubernetes.</p><p style=\"margin-left:0px;\">Вы также получите <strong>30-дневную гарантию возврата денег.</strong></p><p style=\"margin-left:0px;\">Очень надеюсь увидеть вас на курсе!</p>",
-    "requirements": [
-      "Базовые знания Docker",
-      "Компьютер MacOS или Windows и желание учиться"
-    ],
-    "target_audience": [
-      "Инженеры DevOps, которые хотят научиться использовать Kubernetes",
-      "Разработчики программного обеспечения, которые хотят узнать, как запускть приложения в кластере Kubernetes"
-    ],
-    "preview_img": "",
-    "preview_video": "",
-    "duration": null,
-    "category": "a1a1a1a1-1111-4aaa-aaaa-111111111111",
-    "language": "9523cee3-7413-4d47-afdd-df9fd8e9ad49",
-    "level": "beginner",
-    "what_you_will_learn": [
-      "Поймёте архитектуру Kubernetes, включая узлы, поды, сервисы и деплойменты, а также то, как управлять сервисами, узлами, подами и деплойментами.",
-      "Создание кластера Kubernetes, управление им с помощью Kubernetes Dashboard, создание подов, деплойментов и сервисов, используя kubectl",
-      "Создадите различные виды сервисов, таких как ClusterIP, NodePort и LoadBalancer, и, конечно же, поймете, как работает внутренний DNS",
-      "Создание служб и деплойментов с помощью конфигурационных файлов YAML, которые позволяют быстро и легко применять и обновлять конфигурации"
-    ],
-    "is_free": false,
-    "price": "9.99",
-    "is_published": false,
-    "subtitles": [
-      "662ac5c1-8acb-40d9-a161-b4fa23ef8344",
-      "9523cee3-7413-4d47-afdd-df9fd8e9ad49"
-    ],
-    "authors": [
-      "d0e1f2a3-b4c5-4d6e-7f8a-9b0c1d2e3f4a"
-    ],
-    "students": [],
-    "topics": [
-      "78c785f8-d000-4d4b-bba2-11ca5065cd06",
-      "dba64c85-8d1d-4d16-85ee-9355cc9bde09"
-    ]
-  }
-}
 ]

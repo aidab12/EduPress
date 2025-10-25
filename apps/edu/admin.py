@@ -1,47 +1,8 @@
 from django.contrib import admin
-from django.contrib.admin import AdminSite
-from django.db.models.expressions import DatabaseDefault
 
 from apps.edu.models import (AboutCompany, Blog, BlogCategory, Course,
-                             CourseCategory, Instructor, Lecture,
+                             CourseCategory, Instructor, Lecture, CompanySocialLink,
                              LectureContent, Section)
-from models.contacts import CompanySocialLink
-
-
-class MyAdminSite(AdminSite):
-    site_header = "Udemy Clone - Панель управления"
-
-    def get_app_list(self, request, app_label=None):
-        """
-        Переопределяем метод для кастомной сортировки моделей
-        """
-        app_dict = self._build_app_dict(request, app_label)
-
-        model_order = [
-            'CourseCategory',
-            'Course',
-            'Lesson',
-            'Section',
-            'AboutCompany',
-            'BlogCategory',
-            'Blog'
-        ]
-
-
-        for app in app_dict.values():
-            app['models'].sort(
-                key=lambda x: (
-                    model_order.index(x['object_name'])
-                    if x['object_name'] in model_order
-                    else len(model_order)
-                )
-            )
-
-        return app_dict.values()
-
-
-
-admin_site = MyAdminSite(name='myadmin')
 
 
 @admin.register(CourseCategory)
@@ -90,7 +51,7 @@ class AboutCompanyModelAdmin(admin.ModelAdmin):
 
 
 @admin.register(Blog)
-class BlogAdmin(admin.ModelAdmin):
+class BlogModelAdmin(admin.ModelAdmin):
 
     def save_model(self, request, obj, form, change):
         if not change:
@@ -99,10 +60,58 @@ class BlogAdmin(admin.ModelAdmin):
 
 
 @admin.register(BlogCategory)
-class BlogCategoryAdmin(admin.ModelAdmin):
+class BlogCategoryModelAdmin(admin.ModelAdmin):
     pass
 
 
 @admin.register(Instructor)
-class InstuctorAdmin(admin.ModelAdmin):
+class InstructorModelAdmin(admin.ModelAdmin):
     pass
+
+
+# def get_app_list(self, request, app_label=None):
+#     """
+#     Переопределяем метод для кастомной сортировки моделей
+#     """
+#     app_dict = self._build_app_dict(request, app_label)
+#
+#     model_order = [
+#         'CourseCategory',
+#         'Course',
+#         'Lesson',
+#         'Section',
+#         'AboutCompany',
+#         'BlogCategory',
+#         'Blog'
+#     ]
+#
+#     for app in app_dict.values():
+#         app['models'].sort(
+#             key=lambda x: (
+#                 model_order.index(x['object_name'])
+#                 if x['object_name'] in model_order
+#                 else len(model_order)
+#             )
+#         )
+#
+#     return app_dict.values()
+
+
+def get_app_list(self, request, app_label=None):
+    """
+    Return a sorted list of all the installed apps that have been
+    registered in this site.
+    """
+    app_dict = self._build_app_dict(request, app_label)
+
+    # Sort the apps alphabetically.
+    app_list = sorted(app_dict.values(), key=lambda x: x["name"].lower())
+
+    # Sort the models alphabetically within each app.
+    for app in app_list:
+        app["models"].sort(key=lambda x: x["name"])
+
+    return app_list
+
+
+admin.AdminSite.get_app_list = get_app_list

@@ -1,4 +1,5 @@
 import os.path
+import sys
 from datetime import timedelta
 from pathlib import Path
 
@@ -7,7 +8,7 @@ from dotenv import load_dotenv
 load_dotenv('.env')
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+sys.path.append(os.path.join(BASE_DIR, 'apps'))
 # Quick-start development settings - unsuitable for production
 
 # SECURITY WARNING: keep the secret key used in production secret!
@@ -114,7 +115,6 @@ PASSWORD_HASHERS = [
     "django.contrib.auth.hashers.BCryptSHA256PasswordHasher",
     "django.contrib.auth.hashers.ScryptPasswordHasher",
 ]
-
 
 AUTH_USER_MODEL = 'user.User'
 
