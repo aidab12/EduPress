@@ -1,12 +1,13 @@
-from drf_spectacular.utils import extend_schema_view, extend_schema
-
-from rest_framework.generics import (CreateAPIView)
-from rest_framework.permissions import (AllowAny)
+from drf_spectacular.utils import extend_schema, extend_schema_view
+from rest_framework.generics import CreateAPIView
+from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from rest_framework.status import HTTP_204_NO_CONTENT
 from rest_framework.views import APIView
 from rest_framework_simplejwt.tokens import RefreshToken
-from apps.user.api.serializers import SignUpSerializer, LoginSerializer, ChangePasswordSerializer
+
+from apps.user.api.serializers import (ChangePasswordSerializer,
+                                       LoginSerializer, SignUpSerializer)
 
 
 @extend_schema_view(

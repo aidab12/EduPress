@@ -14,7 +14,7 @@
     "preview_img": "course/course/%Y/%m/%d/introduction.png",
     "preview_video": "course/course/%Y/%m/%d/Шаг_1_-_Что_такое_Django._Инструментальные_средства.mp4",
     "duration": "2.0",
-    "category": "fa31b493-66c2-478d-802f-7bdfd3e68aa5",
+    "category": "a1a1a1a1-1111-4aaa-aaaa-111111111111",
     "language": "9523cee3-7413-4d47-afdd-df9fd8e9ad49",
     "level": "all_levels",
     "what_you_will_learn": [
@@ -50,7 +50,7 @@
       "9523cee3-7413-4d47-afdd-df9fd8e9ad49"
     ],
     "authors": [
-      "2967c9c2-ba0e-4cdb-baa1-95cf73b04a34"
+      "a7b8c9d0-e1f2-4a3b-4c5d-6e7f8a9b0c1d"
     ],
     "students": [
       "88b8c9d0-e1f2-4a3b-4c5d-6e7f8a9b0c1d",
@@ -104,7 +104,7 @@
       "662ac5c1-8acb-40d9-a161-b4fa23ef8344"
     ],
     "authors": [
-      "2967c9c2-ba0e-4cdb-baa1-95cf73b04a34"
+      "a7b8c9d0-e1f2-4a3b-4c5d-6e7f8a9b0c1d"
     ],
     "students": [],
     "topics": [

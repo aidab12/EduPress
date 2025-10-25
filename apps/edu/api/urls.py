@@ -1,8 +1,8 @@
 from django.urls import path
-from apps.edu.api.views import (CourseCategoryListView, CourseCategoryDetailView,
-                                AboutUsListView, CourseListView, CourseDetailView,
-                                CourseCreateView
-                                )
+
+from apps.edu.api.views import (AboutUsListView, CourseCategoryDetailView,
+                                CourseCategoryListView, CourseCreateView,
+                                CourseDetailView, CourseListView)
 
 app_name = 'edu'
 

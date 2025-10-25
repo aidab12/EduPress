@@ -1,14 +1,19 @@
-from django.core.validators import MinValueValidator, MaxValueValidator, FileExtensionValidator
+from django.core.validators import (FileExtensionValidator, MaxValueValidator,
+                                    MinValueValidator)
 from django.db import models
-from django.db.models import (CharField, TextField, ImageField,
-                              ForeignKey, PROTECT, ManyToManyField, PositiveSmallIntegerField,
-                              DateTimeField, CASCADE, URLField, TextChoices, FloatField,
-                              DecimalField, BooleanField, FileField, JSONField, Sum, PositiveIntegerField)
+from django.db.models import (CASCADE, PROTECT, BooleanField, CharField,
+                              DateTimeField, DecimalField, FileField,
+                              FloatField, ForeignKey, ImageField, JSONField,
+                              ManyToManyField, PositiveIntegerField,
+                              PositiveSmallIntegerField, TextChoices,
+                              TextField)
 from django.utils.translation import gettext_lazy as _
 from django_ckeditor_5.fields import CKEditor5Field
-
-from apps.edu.models.base import CreatedBaseModel, UUIDBaseModel, SlugBasedModel, MAX_CHAR_LENGTH, OrderNumberBaseModel
 from video_encoding.fields import VideoField
+
+from apps.edu.models.base import (MAX_CHAR_LENGTH, CreatedBaseModel,
+                                  OrderNumberBaseModel, SlugBasedModel,
+                                  UUIDBaseModel)
 
 NULLABLE = {'blank': True, 'null': True}
 

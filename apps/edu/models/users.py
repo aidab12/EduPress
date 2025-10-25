@@ -1,4 +1,4 @@
-from django.db.models import (CharField, TextField, ImageField)
+from django.db.models import CharField, ImageField, TextField
 
 from apps.user.models import User
 

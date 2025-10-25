@@ -1,9 +1,10 @@
-from django.db.models import UUIDField, DateField, EmailField, BooleanField, CharField, TextChoices
-
-from django.contrib.auth.models import (AbstractBaseUser, PermissionsMixin, BaseUserManager)
+from django.contrib.auth.models import (AbstractBaseUser, BaseUserManager,
+                                        PermissionsMixin)
+from django.db.models import (BooleanField, CharField, DateField, EmailField,
+                              TextChoices, UUIDField)
+from django.utils.translation import gettext_lazy as _
 
 from apps.edu.models.base import UUIDBaseModel
-from django.utils.translation import gettext_lazy as _
 
 
 class UserManager(BaseUserManager):

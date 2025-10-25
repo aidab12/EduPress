@@ -1,8 +1,8 @@
-from rest_framework.generics import ListAPIView, RetrieveAPIView, CreateAPIView
+from rest_framework.generics import CreateAPIView, ListAPIView, RetrieveAPIView
 
 from apps.edu.api.company import AboutUsSerializer
 from apps.edu.api.courses import CourseCategorySerializer, CourseSerializer
-from apps.edu.models import CourseCategory, AboutCompany, Course
+from apps.edu.models import AboutCompany, Course, CourseCategory
 
 
 class CourseCategoryListView(ListAPIView):

@@ -1,4 +1,5 @@
 from typing import List
+
 from django.core.management.base import BaseCommand
 from django_minio_backend.models import MinioBackend
 from django_minio_backend.utils import get_setting

@@ -1,8 +1,9 @@
-from django.db.models import (CharField, ForeignKey, PROTECT, BooleanField, ImageField)
+from django.db.models import (PROTECT, BooleanField, CharField, ForeignKey,
+                              ImageField)
 from django.utils.translation import gettext_lazy as _
 from django_ckeditor_5.fields import CKEditor5Field
 
-from .base import CreatedBaseModel, SlugBasedModel, MAX_CHAR_LENGTH
+from .base import MAX_CHAR_LENGTH, CreatedBaseModel, SlugBasedModel
 
 
 class BlogCategory(SlugBasedModel):

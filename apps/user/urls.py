@@ -1,6 +1,6 @@
-from django.urls import path, include
+from django.urls import include, path
 
-from apps.user.views import SignUpAPIView, LoginAPIView, ChangePasswordView
+from apps.user.views import ChangePasswordView, LoginAPIView, SignUpAPIView
 
 app_name = 'user'
 urlpatterns = [

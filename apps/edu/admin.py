@@ -1,8 +1,9 @@
 from django.contrib import admin
 from django.db.models.expressions import DatabaseDefault
 
-from apps.edu.models import CourseCategory, Course, AboutCompany, Blog, BlogCategory, LectureContent, Lecture, Section, \
-    Instructor
+from apps.edu.models import (AboutCompany, Blog, BlogCategory, Course,
+                             CourseCategory, Instructor, Lecture,
+                             LectureContent, Section)
 from apps.edu.models.contacts import CompanySocialLink
 
 

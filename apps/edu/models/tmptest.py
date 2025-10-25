@@ -1,8 +1,9 @@
 import os
-from django.db import models
 
-from edu.models import UUIDBaseModel
 from django.core.files.uploadedfile import SimpleUploadedFile
+from django.db import models
+from edu.models import UUIDBaseModel
+
 
 class CreatedImageModelTest(UUIDBaseModel):
     @classmethod

@@ -6,7 +6,7 @@ https://www.figma.com/design/gFoTExaXHl19o8PoNNgGSL/Free-Education-Template-%7C-
 docker compose +
 Makefile +
 github cicd -
-isort, flake8 -
+isort, flake8 +
 minio +
 redis +
 postgresql +
@@ -27,6 +27,8 @@ Task
     LectureContent,
     topic+, instructor+, user+, CourseCategory+
 9. model larni sort qilib chiqarish (adminka)
+10. Argon
+
 
 
 

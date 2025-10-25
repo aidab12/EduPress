@@ -20,9 +20,17 @@ dependencies = [
     "djangorestframework-simplejwt>=5.5.1",
     "drf-spectacular>=0.28.0",
     "faker>=37.6.0",
+    "flake8>=7.3.0",
+    "isort>=7.0.0",
     "pillow>=11.3.0",
     "psycopg2-binary>=2.9.10",
     "python-dotenv>=1.1.1",
     "redis>=6.4.0",
     "six>=1.17.0",
+]
+
+[dependency-groups]
+dev = [
+    "flake8>=7.3.0",
+    "isort>=7.0.0",
 ]

@@ -55,6 +55,8 @@ class SignUpSerializer(serializers.ModelSerializer):
         }
 
 
+
+
 class LoginSerializer(serializers.Serializer):
     email = serializers.CharField(label="Email", write_only=True)
     password = serializers.CharField(label="Password", write_only=True)
