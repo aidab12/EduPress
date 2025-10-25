@@ -2,8 +2,8 @@ from django.contrib import admin
 from django.db.models.expressions import DatabaseDefault
 
 from edu.models import (AboutCompany, Blog, BlogCategory, Course,
-                             CourseCategory, Instructor, Lecture,
-                             LectureContent, Section)
+                        CourseCategory, Instructor, Lecture,
+                        LectureContent, Section)
 from edu.models.contacts import CompanySocialLink
 
 
@@ -28,6 +28,7 @@ class LectureInline(admin.StackedInline):
     model = Lecture
     extra = 1
 
+
 @admin.register(Section)
 class SectionAdmin(admin.ModelAdmin):
     inlines = [LectureInline, LectureContentInline]
@@ -41,9 +42,14 @@ class SocialLinkInline(admin.TabularInline):
 
 
 @admin.register(AboutCompany)
-class AboutCompanyAdmin(admin.ModelAdmin):
+class AboutCompanyModelAdmin(admin.ModelAdmin):
     list_display = ('title', 'email')
     inlines = SocialLinkInline,
+
+    def has_add_permission(self, request):
+        if AboutCompany.objects.count():
+            return False
+        return super().has_add_permission(request)
 
 
 @admin.register(Blog)
