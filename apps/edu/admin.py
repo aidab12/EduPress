@@ -20,12 +20,11 @@ class CourseAdmin(admin.ModelAdmin):
 @admin.register(LectureContent)
 class LectureContentModelAdmin(admin.ModelAdmin):
     model = LectureContent
-    extra = 1
+    readonly_fields = ['duration']
 
 
 class LectureInline(admin.StackedInline):
     model = Lecture
-    extra = 1
 
 
 @admin.register(Section)

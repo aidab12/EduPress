@@ -151,7 +151,7 @@ class LectureContent(CreatedBaseModel):
     title = CharField(max_length=MAX_CHAR_LENGTH, **NULLABLE)
     lecture = ForeignKey('edu.Lecture', CASCADE, related_name='lecture_contents')
     section = ForeignKey('edu.Section', CASCADE)
-    duration = FloatField(editable=False, null=True)
+    duration = FloatField(null=True, blank=True)
     video = VideoField(upload_to=course_upload_path, duration_field='duration', verbose_name=_("Видео к урок"))
     file = FileField(
         **NULLABLE,
