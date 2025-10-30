@@ -1,4 +1,5 @@
 from drf_spectacular.utils import extend_schema, extend_schema_view
+from rest_framework import status
 from rest_framework.generics import CreateAPIView
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
@@ -8,6 +9,10 @@ from rest_framework_simplejwt.tokens import RefreshToken
 
 from user.api.serializers import (ChangePasswordSerializer,
                                        LoginSerializer, SignUpSerializer)
+
+from apps.user.api.serializers import VerifySmsCodeSerializer
+from apps.user.tasks import custom_send_mail
+from apps.user.utils import check_sms_code
 
 
 @extend_schema_view(
@@ -20,6 +25,49 @@ class SignUpAPIView(CreateAPIView):
     serializer_class = SignUpSerializer
     permission_classes = AllowAny,
 
+    def post(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        user = serializer.save()
+
+
+        email = user.email
+        custom_send_mail(email)
+
+        return Response(
+            serializer.to_representation(user),
+            status=status.HTTP_201_CREATED
+        )
+
+@extend_schema_view(
+    post=extend_schema(
+        summary='Подтверждение почты',
+        tags=['Аутентификация/Авторизация']
+    )
+)
+class VerifyCodeAPIView(APIView):
+    serializer_class = VerifySmsCodeSerializer
+    permission_classes = AllowAny,
+
+    def post(self, request, *args, **kwargs):
+        serializer = VerifySmsCodeSerializer(data=request.data, context={'request': request})
+        serializer.is_valid(raise_exception=True)
+
+        is_valid_code = check_sms_code(
+            phone=serializer.validated_data['phone'],
+            code=serializer.validated_data['code']
+        )
+
+        if not is_valid_code:
+            return Response(
+                {"message": "Invalid verification code"},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+
+        serializer.activate_user()
+
+        return Response(serializer.get_data, status=status.HTTP_200_OK)
 
 @extend_schema_view(
     post=extend_schema(

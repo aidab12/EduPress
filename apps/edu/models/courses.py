@@ -113,7 +113,7 @@ class Course(CreatedBaseModel, SlugBasedModel):
 
     class Meta:
         verbose_name = _("Курс")
-        verbose_name_plural = _("1. Курсы")
+        verbose_name_plural = _("Курсы")
         ordering = ["-created_at"]
 
     def __str__(self):
@@ -133,7 +133,7 @@ class Section(CreatedBaseModel, OrderNumberBaseModel):
 
     class Meta:
         verbose_name = _('Учебный план (Секция)')
-        verbose_name_plural = _('2. Учебный план (Секции)')
+        verbose_name_plural = _('Учебный план (Секции)')
 
     def __str__(self):
         return self.title

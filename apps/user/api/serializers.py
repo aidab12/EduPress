@@ -1,13 +1,17 @@
-from django.contrib.auth import authenticate
-from django.contrib.auth.password_validation import validate_password
-from rest_framework import serializers
-from rest_framework.views import APIView
+import re
+from typing import Any
 
+from django.contrib.auth import authenticate
+from django.core.exceptions import ValidationError
+from rest_framework import serializers
+from rest_framework.fields import CharField, IntegerField, EmailField
+from rest_framework.serializers import Serializer, ModelSerializer
+from rest_framework_simplejwt.tokens import Token, RefreshToken
 from user.models import User
 
 
 class SignUpSerializer(serializers.ModelSerializer):
-    email = serializers.EmailField()
+    email = serializers.EmailField(default='abda@example.com')
 
     class Meta:
         model = User
@@ -48,13 +52,62 @@ class SignUpSerializer(serializers.ModelSerializer):
         return {
             "user": {
                 "id": instance.id,
-                "mail": instance.email,
+                "email": instance.email,
                 "username": instance.username,
             },
             "message": "Registration successful."
         }
 
 
+class UserModelSerializer(ModelSerializer):
+    class Meta:
+        model = User
+        fields = 'id', 'email',
+
+
+class VerifySmsCodeSerializer(Serializer):
+    email = EmailField()
+    code = IntegerField(default=1000)
+    token_class = RefreshToken
+
+    default_error_messages = {
+        "no_active_account": "No active account found with the given credentials",
+        "invalid_code": "Invalid verification code"
+    }
+
+    def validate(self, attrs: dict[str, Any]):
+        try:
+            self.user = User.objects.get(email=attrs['email'])
+        except User.DoesNotExist:
+            raise ValidationError(self.default_error_messages['no_active_account'])
+
+        return attrs
+
+    def activate_user(self):
+        """Активирует пользователя после успешной верификации"""
+        if not self.user.is_active:
+            self.user.is_active = True
+            self.user.save(update_fields=['is_active'])
+
+    @property
+    def get_data(self):
+        refresh = self.get_token(self.user)
+        data = {
+            'access_token': str(refresh.access_token),
+            'refresh_token': str(refresh)
+        }
+        user_data = UserModelSerializer(self.user).data
+
+        return {
+            'message': "Account activated successfully",
+            'data': {
+                **data, **{'user': user_data}
+            }
+        }
+
+    @classmethod
+    def get_token(cls, user) -> Token:
+        return cls.token_class.for_user(user)
 
 
 class LoginSerializer(serializers.Serializer):
@@ -99,5 +152,3 @@ class ChangePasswordSerializer(serializers.ModelSerializer):
         old_password = attrs.pop('old_password')
         user.check_password(old_password)
         return super().validate(attrs)
-
-
