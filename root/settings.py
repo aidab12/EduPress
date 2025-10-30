@@ -229,7 +229,7 @@ SIMPLE_JWT = {
 
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = os.getenv('EMAIL_PORT')
 EMAIL_USE_TLS = False
@@ -237,6 +237,11 @@ EMAIL_USE_SSL = True
 EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_PASSWORD')
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+# Отключить проверку SSL (только для разработки!)
+EMAIL_SSL_CERTFILE = None
+EMAIL_SSL_KEYFILE = None
+EMAIL_USE_SSL = False
 
 CELERY_BROKER_URL = os.getenv('REDIS_LOCATION')
 CELERY_RESULT_BACKEND = os.getenv('REDIS_LOCATION')
