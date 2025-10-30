@@ -4,15 +4,15 @@ from celery import shared_task
 from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
 
+from apps.user.utils import random_code
 from root import settings
 
 
 @shared_task
-def custom_send_mail(new_user):
+def custom_send_mail(new_user, code):
     subject = "Добро пожаловать на наш сайт!"
     from_email = settings.EMAIL_HOST_USER
     to_email = new_user
-    code = random.randint(1000, 9999)
     html_content = render_to_string(
         "users/mail-register.html",
         context={

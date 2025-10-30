@@ -6,13 +6,12 @@ from rest_framework.response import Response
 from rest_framework.status import HTTP_204_NO_CONTENT
 from rest_framework.views import APIView
 from rest_framework_simplejwt.tokens import RefreshToken
-
 from user.api.serializers import (ChangePasswordSerializer,
-                                       LoginSerializer, SignUpSerializer)
+                                  LoginSerializer, SignUpSerializer)
 
-from apps.user.api.serializers import VerifySmsCodeSerializer
+from apps.user.api.serializers import VerifySmsCodeSerializer, SendSmsCodeSerializer
 from apps.user.tasks import custom_send_mail
-from apps.user.utils import check_sms_code
+from apps.user.utils import check_sms_code, random_code
 
 
 @extend_schema_view(
@@ -30,14 +29,34 @@ class SignUpAPIView(CreateAPIView):
         serializer.is_valid(raise_exception=True)
         user = serializer.save()
 
-
-        email = user.email
-        custom_send_mail(email)
+        email = serializer.data['email']
+        code = random_code()
+        custom_send_mail(email, code)
 
         return Response(
             serializer.to_representation(user),
             status=status.HTTP_201_CREATED
         )
+
+
+@extend_schema_view(
+    post=extend_schema(
+        summary='Отправка кода',
+        tags=['Аутентификация/Авторизация']
+    )
+)
+class SendCodeAPIView(APIView):
+    serializer_class = SendSmsCodeSerializer
+    permission_classes = (AllowAny,)
+
+    def post(self, request, *args, **kwargs):
+        serializer = SendSmsCodeSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        code = random_code()
+        email = serializer.data['email']
+        custom_send_mail(email, code)
+        return Response({"message": "send sms code"})
+
 
 @extend_schema_view(
     post=extend_schema(
@@ -64,10 +83,10 @@ class VerifyCodeAPIView(APIView):
                 status=status.HTTP_400_BAD_REQUEST
             )
 
-
         serializer.activate_user()
 
         return Response(serializer.get_data, status=status.HTTP_200_OK)
+
 
 @extend_schema_view(
     post=extend_schema(

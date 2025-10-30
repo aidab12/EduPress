@@ -59,6 +59,14 @@ class SignUpSerializer(serializers.ModelSerializer):
         }
 
 
+class SendSmsCodeSerializer(Serializer):
+    email = EmailField(default='abda@example.com')
+
+    def validate(self, email):
+
+        return email
+
+
 class UserModelSerializer(ModelSerializer):
     class Meta:
         model = User
