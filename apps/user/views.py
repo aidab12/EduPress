@@ -54,7 +54,7 @@ class VerifyCodeAPIView(APIView):
         serializer.is_valid(raise_exception=True)
 
         is_valid_code = check_sms_code(
-            phone=serializer.validated_data['phone'],
+            email=serializer.validated_data['email'],
             code=serializer.validated_data['code']
         )
 

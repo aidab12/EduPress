@@ -17,8 +17,8 @@ def send_sms_code(phone: str, code: int, expire_time=60):
     cache.set(_key, code, expire_time)
 
 
-def check_sms_code(phone, code):
-    _key = _get_login_key(phone)
+def check_sms_code(email, code):
+    _key = _get_login_key(email)
     _code = cache.get(_key)
     print(_code, code)
     if _code is None:
